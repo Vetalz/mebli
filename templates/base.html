@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Изготовление кухни любой сложности. Собственное производство в Кривом Роге.">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Кухни на заказ, Заказать кухню в Кривом Роге, Заказать замер кухни, Купить кухню">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+    <link rel="stylesheet" href="{% static 'css/css-reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    <script src="//code-eu1.jivosite.com/widget/zAktC8sPVP" async></script>
+</head>
+<body class="paralax">
+    <div class="wrapper">
+        {% block header %}{% endblock %}
+        {% block main %}{% endblock %}
+        {% include 'inc/_footer.html' %}
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

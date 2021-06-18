@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block header %}
+    <header class="header">
+        <div class="header__container">
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li><a data-goto=".top" href="{% url 'home' %}" class="menu__link">Главная</a></li>
+                        <li><a data-goto=".work" href="#" class="menu__link">Наши работы</a></li>
+                        <li><a data-goto=".about" href="#" class="menu__link">Кто мы</a></li>
+                        <li><a data-goto=".contacts" href="#" class="menu__link">Контакты</a></li>
+                    </ul>
+                    <ul class="lang">
+                        <li><a href="#">ua</a></li>
+                        <li><a href="#">ru</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__phone">
+                <a href="tel:380989676756">+38 (098) 967 67 56</a>
+                <span>Закажите бесплатный замер кухни</span>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block main %}
+    <main class="page">
+        <section class="top__block top">
+            <h1 class="top__title">Мебельная мастерская</h1>
+            <h2>Изготовление кухонь любой сложности</h2>
+            <span>от 18 000 грн</span>
+            <form class="top__form" method="post">
+                <div class="container">
+                    {% csrf_token %}
+                    <label for="{{ form.number_phone.name }}">Оставьте заявку через форму на сайте и получите скидку <span>-10%</span></label>
+                    {{ form.number_phone }}
+                    {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                    <input type="submit" value="Позвоните мне">
+                </div>
+            </form>
+        </section>
+        <div class="content">
+            <section class="why__block why">
+                <h2 class="why__title">Почему клиенты выбирают нас</h2>
+                <div class="why__wrap">
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-home"></i>
+                        </div>
+                        <span class="why__title">
+                            Собственное производство в Кривом Роге
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-like"></i>
+                        </div>
+                        <span class="why__title">
+                            Лучшие материалы и гарантия качества
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-star"></i>
+                        </div>
+                        <span class="why__title">
+                            Более 500 кухонь установлено за последние 5 лет
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-file-1"></i>
+                        </div>
+                        <span class="why__title">
+                            Работаем по договору
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-check"></i>
+                        </div>
+                        <span class="why__title">
+                            Изготовим кухни любой сложности
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-male"></i>
+                        </div>
+                        <span class="why__title">
+                            Бесплатный выезд дизайнера на замер
+                        </span>
+                    </div>
+                </div>
+            </section>
+            <section class="form">
+                <h2>Закажите бесплатный выезд дизайнера на замер</h2>
+                <form class="form__wrap" method="post">
+                    <div class="form__text">
+                        <p>На адресе клиента наш дизайнер сделает:</p>
+                        <ul>
+                            <li>Точный замер Вашей кухни</li>
+                            <li>Предложит матриалы и покажет образцы фасадов</li>
+                            <li>Составит дизайн-проект Вашей будущей кухни</li>
+                        </ul>
+                    </div>
+                    <div class="form__form">
+                        {% csrf_token %}
+                        <label for="{{ form.number_phone.name }}">Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут</label>
+                        {{ form.number_phone }}
+
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <input type="submit" value="Позвоните мне">
+                </form>
+            </section>
+            <section class="work__block work">
+                <h2>Наши работы</h2>
+                <div class="wrap">
+                    <div class="work__body">
+                        <div class="slider-for">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                        <div class="slider-nav">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form">
+                <h2>Закажите бесплатный выезд дизайнера на замер</h2>
+                <form class="form__wrap" method="post">
+                    <div class="form__text">
+                        <p>Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни</p>
+                    </div>
+                    <div class="form__form v2">
+                        {% csrf_token %}
+                        {{ form.budget }}
+                        {{ form.number_phone }}
+
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <input type="submit" value="Позвоните мне">
+                </form>
+            </section>
+            <section class="about">
+                <div class="wrap">
+                    <h2>Кто мы</h2>
+                    <p>
+                        Производитель корпусной мебели с более чем 5-летним опытом работы.
+                        Имеем собственное производство в Кривом Роге, где создаем современные кухни и другую качественную корпусную мебель.
+                        За время нашей работы было выполнено более 500 заказов, что сегодня является весомым аргументом для клиентов при выборе нашей компании.
+                    </p>
+                </div>
+            </section>
+            <section class="contacts">
+                <h2>Контакты</h2>
+                <div class="wrap">
+                    <div class="address">
+                        <div>
+                            <p>ул. Гетьманская, 110, г. Кривой Рог</p>
+                        </div>
+                        <div>
+                            <p>Телефон: +38 (098) 967 67 56</p>
+                        </div>
+                        <div>
+                            <p>График работы:</p>
+                            <p>ПН-ПТ: 9:00-19:00</p>
+                            <p>СБ:9:00-15:00</p>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4046237441216!2d33.381140519939194!3d47.91980719956968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db209e34cb356b%3A0xbb2d052cb1e80f43!2sVulytsya%20Het%CA%B9mans%CA%B9ka%2C%20110%2C%20Kryvyi%20Rih%2C%20Dnipropetrovs&#39;ka%20oblast%2C%2050000!5e0!3m2!1sen!2sua!4v1623133736524!5m2!1sen!2sua" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}
+
+
