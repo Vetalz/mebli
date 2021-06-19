@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from .models import Gallery, Clients
 from .forms import ClientsForm
-from django.core.mail import send_mail
+from django.core.mail import send_mass_mail
 from django.contrib import messages
 from django.conf import settings
 
@@ -22,7 +22,8 @@ def index(request):
             else:
                 text = f'Телефон: {phone}\n🤟😎🤟'
 
-            send_mail('💲Потенциальный клиент)💲', text, 'vitaly482@gmail.com', settings.EMAIL_TARGET)
+            message = ('💲Потенциальный клиент)💲', text, 'vitaly482@gmail.com', settings.EMAIL_TARGET)
+            send_mass_mail((message,))
         else:
             messages.error(request, 'Данные не отправлены')
     else:

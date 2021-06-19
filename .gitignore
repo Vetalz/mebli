@@ -40,3 +40,5 @@ make.bat
 Makefile
 
 doc-dev
+
+*.mo

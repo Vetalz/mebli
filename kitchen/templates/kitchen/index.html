@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static i18n %}
 
 {% block title %}
     {{ title }}
@@ -13,10 +14,10 @@
                 </div>
                 <nav class="menu__body">
                     <ul class="menu__list">
-                        <li><a data-goto=".top" href="{% url 'home' %}" class="menu__link">Главная</a></li>
-                        <li><a data-goto=".work" href="#" class="menu__link">Наши работы</a></li>
-                        <li><a data-goto=".about" href="#" class="menu__link">Кто мы</a></li>
-                        <li><a data-goto=".contacts" href="#" class="menu__link">Контакты</a></li>
+                        <li><a data-goto=".top" href="{% url 'home' %}" class="menu__link">{% trans 'Главная' %}</a></li>
+                        <li><a data-goto=".work" href="#" class="menu__link">{% trans 'Наши работы' %}</a></li>
+                        <li><a data-goto=".about" href="#" class="menu__link">{% trans 'Кто мы' %}</a></li>
+                        <li><a data-goto=".contacts" href="#" class="menu__link">{% trans 'Контакты' %}</a></li>
                     </ul>
                     <ul class="lang">
                         <li><a href="#">ua</a></li>
@@ -26,7 +27,7 @@
             </div>
             <div class="header__phone">
                 <a href="tel:380989676756">+38 (098) 967 67 56</a>
-                <span>Закажите бесплатный замер кухни</span>
+                <span>{% trans 'Закажите бесплатный замер кухни' %}</span>
             </div>
         </div>
     </header>
@@ -35,13 +36,13 @@
 {% block main %}
     <main class="page">
         <section class="top__block top">
-            <h1 class="top__title">Мебельная мастерская</h1>
-            <h2>Изготовление кухонь любой сложности</h2>
-            <span>от 18 000 грн</span>
+            <h1 class="top__title">{% trans 'Мебельная мастерская' %}</h1>
+            <h2>{% trans 'Изготовление кухонь любой сложности' %}</h2>
+            <span>{% trans 'от 18 000 грн' %}</span>
             <form class="top__form" method="post">
                 <div class="container">
                     {% csrf_token %}
-                    <label for="{{ form.number_phone.name }}">Оставьте заявку через форму на сайте и получите скидку <span>-10%</span></label>
+                    <label for="{{ form.number_phone.name }}">{% trans 'Оставьте заявку через форму на сайте и получите скидку' %} <span>-10%</span></label>
                     {{ form.number_phone }}
                     {% if messages %}
                         <ul class="messages">
@@ -50,20 +51,20 @@
                             {% endfor %}
                         </ul>
                     {% endif %}
-                    <input type="submit" value="Позвоните мне">
+                    <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </div>
             </form>
         </section>
         <div class="content">
             <section class="why__block why">
-                <h2 class="why__title">Почему клиенты выбирают нас</h2>
+                <h2 class="why__title">{% trans 'Почему клиенты выбирают нас' %}</h2>
                 <div class="why__wrap">
                     <div class="why__item">
                         <div class="why__icon">
                             <i class="fi fi-home"></i>
                         </div>
                         <span class="why__title">
-                            Собственное производство в Кривом Роге
+                            {% trans 'Собственное производство в Кривом Роге' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -71,7 +72,7 @@
                             <i class="fi fi-like"></i>
                         </div>
                         <span class="why__title">
-                            Лучшие материалы и гарантия качества
+                            {% trans 'Лучшие материалы и гарантия качества' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -79,7 +80,7 @@
                             <i class="fi fi-star"></i>
                         </div>
                         <span class="why__title">
-                            Более 500 кухонь установлено за последние 5 лет
+                            {% trans 'Более 500 кухонь установлено за последние 5 лет' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -87,7 +88,7 @@
                             <i class="fi fi-file-1"></i>
                         </div>
                         <span class="why__title">
-                            Работаем по договору
+                            {% trans 'Работаем по договору' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -95,7 +96,7 @@
                             <i class="fi fi-check"></i>
                         </div>
                         <span class="why__title">
-                            Изготовим кухни любой сложности
+                            {% trans 'Изготовим кухни любой сложности' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -103,25 +104,25 @@
                             <i class="fi fi-male"></i>
                         </div>
                         <span class="why__title">
-                            Бесплатный выезд дизайнера на замер
+                            {% trans 'Бесплатный выезд дизайнера на замер' %}
                         </span>
                     </div>
                 </div>
             </section>
             <section class="form">
-                <h2>Закажите бесплатный выезд дизайнера на замер</h2>
+                <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
                 <form class="form__wrap" method="post">
                     <div class="form__text">
-                        <p>На адресе клиента наш дизайнер сделает:</p>
+                        <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
                         <ul>
-                            <li>Точный замер Вашей кухни</li>
-                            <li>Предложит матриалы и покажет образцы фасадов</li>
-                            <li>Составит дизайн-проект Вашей будущей кухни</li>
+                            <li>{% trans 'Точный замер Вашей кухни' %}</li>
+                            <li>{% trans 'Предложит матриалы и покажет образцы фасадов' %}</li>
+                            <li>{% trans 'Составит дизайн-проект Вашей будущей кухни' %}</li>
                         </ul>
                     </div>
                     <div class="form__form">
                         {% csrf_token %}
-                        <label for="{{ form.number_phone.name }}">Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут</label>
+                        <label for="{{ form.number_phone.name }}">{% trans 'Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут' %}</label>
                         {{ form.number_phone }}
 
                         {% if messages %}
@@ -132,11 +133,11 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <input type="submit" value="Позвоните мне">
+                    <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
             <section class="work__block work">
-                <h2>Наши работы</h2>
+                <h2>{% trans 'Наши работы' %}</h2>
                 <div class="wrap">
                     <div class="work__body">
                         <div class="slider-for">
@@ -153,10 +154,10 @@
                 </div>
             </section>
             <section class="form">
-                <h2>Закажите бесплатный выезд дизайнера на замер</h2>
+                <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
                 <form class="form__wrap" method="post">
                     <div class="form__text">
-                        <p>Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни</p>
+                        <p>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</p>
                     </div>
                     <div class="form__form v2">
                         {% csrf_token %}
@@ -171,31 +172,29 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <input type="submit" value="Позвоните мне">
+                    <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
             <section class="about">
                 <div class="wrap">
-                    <h2>Кто мы</h2>
+                    <h2>{% trans 'Кто мы' %}</h2>
                     <p>
-                        Производитель корпусной мебели с более чем 5-летним опытом работы.
-                        Имеем собственное производство в Кривом Роге, где создаем современные кухни и другую качественную корпусную мебель.
-                        За время нашей работы было выполнено более 500 заказов, что сегодня является весомым аргументом для клиентов при выборе нашей компании.
+                        {% trans 'Производитель корпусной мебели с более чем 5-летним опытом работы. Имеем собственное производство в Кривом Роге, где создаем современные кухни и другую качественную корпусную мебель. За время нашей работы было выполнено более 500 заказов, что сегодня является весомым аргументом для клиентов при выборе нашей компании.' %}
                     </p>
                 </div>
             </section>
             <section class="contacts">
-                <h2>Контакты</h2>
+                <h2>{% trans 'Контакты' %}</h2>
                 <div class="wrap">
                     <div class="address">
                         <div>
-                            <p>ул. Гетьманская, 110, г. Кривой Рог</p>
+                            <p>{% trans 'ул. Гетьманская, 110, г. Кривой Рог' %}</p>
                         </div>
                         <div>
                             <p>Телефон: +38 (098) 967 67 56</p>
                         </div>
                         <div>
-                            <p>График работы:</p>
+                            <p>{% trans 'График работы:' %}</p>
                             <p>ПН-ПТ: 9:00-19:00</p>
                             <p>СБ:9:00-15:00</p>
                         </div>

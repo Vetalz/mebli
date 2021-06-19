@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-06-19 16:03+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
+
+#: kitchen/templates/kitchen/index.html:17
+msgid "Главная"
+msgstr "Головна"
+
+#: kitchen/templates/kitchen/index.html:18
+#: kitchen/templates/kitchen/index.html:140
+msgid "Наши работы"
+msgstr "Наші роботи"
+
+#: kitchen/templates/kitchen/index.html:19
+#: kitchen/templates/kitchen/index.html:180
+msgid "Кто мы"
+msgstr "Хто ми"
+
+#: kitchen/templates/kitchen/index.html:20
+#: kitchen/templates/kitchen/index.html:187
+msgid "Контакты"
+msgstr "Контакти"
+
+#: kitchen/templates/kitchen/index.html:30
+msgid "Закажите бесплатный замер кухни"
+msgstr "Замовте безкоштовний замір кухні"
+
+#: kitchen/templates/kitchen/index.html:39
+msgid "Мебельная мастерская"
+msgstr "Меблева майстерня"
+
+#: kitchen/templates/kitchen/index.html:40
+msgid "Изготовление кухонь любой сложности"
+msgstr "Виготовлення кухонь будь-якої складності"
+
+#: kitchen/templates/kitchen/index.html:41
+msgid "от 18 000 грн"
+msgstr "від 18 000 грн"
+
+#: kitchen/templates/kitchen/index.html:45
+msgid "Оставьте заявку через форму на сайте и получите скидку"
+msgstr "Залиште заявку через форму на сайті та отримайте знижку "
+
+#: kitchen/templates/kitchen/index.html:54
+#: kitchen/templates/kitchen/index.html:136
+#: kitchen/templates/kitchen/index.html:175
+msgid "Позвоните мне"
+msgstr "Зателефонуйте мені"
+
+#: kitchen/templates/kitchen/index.html:60
+msgid "Почему клиенты выбирают нас"
+msgstr "Чому клієнти обирають саме нас "
+
+#: kitchen/templates/kitchen/index.html:67
+msgid "Собственное производство в Кривом Роге"
+msgstr "Власне виробництво у Кривому Розі"
+
+#: kitchen/templates/kitchen/index.html:75
+msgid "Лучшие материалы и гарантия качества"
+msgstr "Найкращі матеріали та гарантія якості"
+
+#: kitchen/templates/kitchen/index.html:83
+msgid "Более 500 кухонь установлено за последние 5 лет"
+msgstr "Понад 500 кухонь встановлено за останні 5 років"
+
+#: kitchen/templates/kitchen/index.html:91
+msgid "Работаем по договору"
+msgstr "Працюємо за договором"
+
+#: kitchen/templates/kitchen/index.html:99
+msgid "Изготовим кухни любой сложности"
+msgstr "Виготовимо кухні будь-якої складності "
+
+#: kitchen/templates/kitchen/index.html:107
+msgid "Бесплатный выезд дизайнера на замер"
+msgstr "Безкоштовний виїзд дизайнера на замір "
+
+#: kitchen/templates/kitchen/index.html:113
+#: kitchen/templates/kitchen/index.html:157
+msgid "Закажите бесплатный выезд дизайнера на замер"
+msgstr "Безкоштовний виїзд дизайнера на замiр"
+
+#: kitchen/templates/kitchen/index.html:116
+msgid "На адресе клиента наш дизайнер сделает:"
+msgstr "Під час візиту до клієнт наш дизайнер зробить:"
+
+#: kitchen/templates/kitchen/index.html:118
+msgid "Точный замер Вашей кухни"
+msgstr "Точний замір кухні"
+
+#: kitchen/templates/kitchen/index.html:119
+msgid "Предложит матриалы и покажет образцы фасадов"
+msgstr "Запропонує матеріали та покаже зразки фасадів"
+
+#: kitchen/templates/kitchen/index.html:120
+msgid "Составит дизайн-проект Вашей будущей кухни"
+msgstr "Складе дизайн-проект майбутньої кухні"
+
+#: kitchen/templates/kitchen/index.html:125
+msgid ""
+"Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 "
+"минут"
+msgstr ""
+
+#: kitchen/templates/kitchen/index.html:160
+msgid ""
+"Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий "
+"вариант кухни"
+msgstr "Вкажіть Ваш номер телефону - і наш менеджер зв’яжеться з Вами протягом 15 хвилин"
+
+#: kitchen/templates/kitchen/index.html:182
+msgid ""
+"Производитель корпусной мебели с более чем 5-летним опытом работы. Имеем "
+"собственное производство в Кривом Роге, где создаем современные кухни и "
+"другую качественную корпусную мебель. За время нашей работы было выполнено "
+"более 500 заказов, что сегодня является весомым аргументом для клиентов при "
+"выборе нашей компании."
+msgstr "Виробник корпусних меблів з понад 5-річним досвідом роботи. Маємо власне виробництво в Кривому Розі, де створюємо сучасні кухні та інші якісні корпусні меблі. За час нашої роботи було виконано понад 500 замовлень, що сьогодні є вагомим аргументом для клієнтів під час вибору нашої компанії."
+
+#: kitchen/templates/kitchen/index.html:191
+msgid "ул. Гетьманская, 110, г. Кривой Рог"
+msgstr "вул. Гетьманська, 110, м. Кривий Ріг"
+
+#: kitchen/templates/kitchen/index.html:197
+msgid "График работы:"
+msgstr "Графік роботи:"
+
+#: templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: templates/admin/base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: templates/inc/_footer.html:7
+msgid "© 2021 Мебельная мастерская"
+msgstr "© 2021 Меблева майстерня"
