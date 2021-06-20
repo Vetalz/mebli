@@ -20,8 +20,8 @@
                         <li><a data-goto=".contacts" href="#" class="menu__link">{% trans 'Контакты' %}</a></li>
                     </ul>
                     <ul class="lang">
-                        <li><a href="#">ua</a></li>
-                        <li><a href="#">ru</a></li>
+                        <li><a href="/uk">ua</a></li>
+                        <li><a href="/ru">ru</a></li>
                     </ul>
                 </nav>
             </div>
@@ -109,9 +109,9 @@
                     </div>
                 </div>
             </section>
-            <section class="form">
+            <section class="form" id="2">
                 <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
-                <form class="form__wrap" method="post">
+                <form class="form__wrap" method="post" >
                     <div class="form__text">
                         <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
                         <ul>
@@ -133,6 +133,7 @@
                         </ul>
                         {% endif %}
                     </div>
+                    <input type="hidden" name="form_number" value="2">
                     <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
@@ -153,7 +154,7 @@
                     </div>
                 </div>
             </section>
-            <section class="form">
+            <section class="form" id="3">
                 <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
                 <form class="form__wrap" method="post">
                     <div class="form__text">
@@ -172,6 +173,7 @@
                         </ul>
                         {% endif %}
                     </div>
+                    <input type="hidden" name="form_number" value="3">
                     <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
@@ -200,12 +202,22 @@
                         </div>
                     </div>
                     <div class="map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4046237441216!2d33.381140519939194!3d47.91980719956968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db209e34cb356b%3A0xbb2d052cb1e80f43!2sVulytsya%20Het%CA%B9mans%CA%B9ka%2C%20110%2C%20Kryvyi%20Rih%2C%20Dnipropetrovs&#39;ka%20oblast%2C%2050000!5e0!3m2!1sen!2sua!4v1623133736524!5m2!1sen!2sua" width="550" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4046237441216!2d33.381140519939194!3d47.91980719956968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db209e34cb356b%3A0xbb2d052cb1e80f43!2sVulytsya%20Het%CA%B9mans%CA%B9ka%2C%20110%2C%20Kryvyi%20Rih%2C%20Dnipropetrovs&#39;ka%20oblast%2C%2050000!5e0!3m2!1sen!2sua!4v1623133736524!5m2!1sen!2sua" width="540" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </section>
         </div>
     </main>
+{% endblock %}
+
+{% block scripts %}
+{% if anchor %}
+<script type='text/javascript'>
+$(document).ready(function(){
+    window.location = '#{{ anchor }}'
+});
+</script>
+{% endif %}
 {% endblock %}
 
 
