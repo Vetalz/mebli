@@ -103,7 +103,7 @@ body._lock {
 }
 
 .paralax {
-    background: linear-gradient( rgba(54, 41, 23, .55), rgba(54, 41, 23, .55)), url("../img/background.jpg");
+    background: url("../img/background.png");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -289,8 +289,7 @@ input[type=submit] {
 }
 
 .form__wrap > input {
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0;
 }
 
 .form__form input {
@@ -665,6 +664,7 @@ li.error {
 
     .address p {
         text-align: center;
+        margin-right: 0;
     }
 
     .slider-for {
