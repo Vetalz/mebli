@@ -8,6 +8,7 @@ from django.contrib import messages
 from django.conf import settings
 from django.utils.translation import ugettext as _
 from django.template.loader import render_to_string
+from blog.models import Article
 
 
 def index(request):
@@ -35,11 +36,13 @@ def index(request):
         form = ClientsForm()
 
     photos = Gallery.objects.all()
+    articles = Article.objects.filter(is_published=True)[:3]
     context = {
         'photos': photos,
         'title': _('Кухни на заказ'),
         'form': form,
-        'anchor': anchor
+        'anchor': anchor,
+        'articles': articles
     }
     return render(request, 'kitchen/index.html', context)
 

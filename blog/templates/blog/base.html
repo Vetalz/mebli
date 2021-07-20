@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}
+{% endblock %}
+
+{% block header %}
+    <header class="header">
+        <div class="header__container">
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li><a href="{% url 'home' %}" class="menu__link">{% trans 'Главная' %}</a></li>
+                        <li><a href="{% url 'home' %}#our_work" class="menu__link">{% trans 'Наши работы' %}</a></li>
+                        <li><a href="{% url 'home' %}#about" class="menu__link">{% trans 'Кто мы' %}</a></li>
+                        <li><a href="{% url 'home' %}#contact" class="menu__link">{% trans 'Контакты' %}</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__phone">
+                <a href="tel:380989676756">+38 (098) 967 67 56</a>
+                <span>{% trans 'Закажите бесплатный замер кухни' %}</span>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block main %}
+{% endblock %}

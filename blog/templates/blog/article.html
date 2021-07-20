@@ -1,0 +1,22 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <main class="page">
+        <div class="content">
+            <section class="contacts">
+                <h2>{{ article.title }}</h2>
+                <div class="wrap">
+                    <div class="single_article_text">
+                        <img src="{{ article.photo.url }}" alt="" class="single_article_img">
+                        {{ article.content|safe|linebreaks }}
+                    </div>
+                    <a href="{% url 'blog'  %}" class="single_article_button">Все статьи</a>
+                </div>
+            </section>
+        </div>
+    </main>
+{% endblock %}

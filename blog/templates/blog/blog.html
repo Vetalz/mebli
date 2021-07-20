@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block main %}
+    <main class="page">
+        <div class="content">
+            <section class="contacts">
+                <h2>Статьи</h2>
+                <div class="wrap">
+                    {% for article in articles %}
+                        <div class="article_prev">
+                            <div class="article_img">
+                                <img src="{{ article.photo.url }}" alt="">
+                            </div>
+                            <div class="article_title">
+                                <h3>{{ article.title }}</h3>
+                                <div class="date">
+                                    <i class="fi fi-date"></i>
+                                    <span>{{ article.time_create|date:"Y-m-d" }}</span>
+                                </div>
+                                <p>{{ article.content|truncatewords:15 }}</p>
+                                <a href="{{ article.get_absolute_url }}" class="article_button">Подробнее</a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                {% if articles.has_other_pages %}
+                <nav class="list_pages">
+                    <ul>
+                        {% if articles.has_previous %}
+                            <li class="page_num">
+                                <a href="?page={{ articles.previous_page_number }}"><i class="fi fi-angle-left"></i></a>
+                            </li>
+                        {% endif %}
+                        {% for p in articles.paginator.page_range %}
+                            {% if articles.number == p %}
+                            <li class="page_num page_num_selected">{{ p }}</li>
+                            {% elif p >= articles.number|add:-1 and p <= articles.number|add:1 %}
+                            <li class="page_num">
+                                <a href="?page={{ p }}">{{ p }}</a>
+                            </li>
+                            {% endif %}
+                        {% endfor %}
+                        {% if articles.has_next %}
+                            <li class="page_num">
+                                <a href="?page={{ articles.next_page_number }}"><i class="fi fi-angle-right"></i></a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </nav>
+                {% endif %}
+            </section>
+        </div>
+    </main>
+{% endblock %}

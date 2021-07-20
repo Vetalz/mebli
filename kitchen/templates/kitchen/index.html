@@ -137,7 +137,7 @@
                     <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
-            <section class="work__block work">
+            <section class="work__block work" id="our_work">
                 <h2>{% trans 'Наши работы' %}</h2>
                 <div class="wrap">
                     <div class="work__body">
@@ -177,7 +177,7 @@
                     <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
-            <section class="about">
+            <section class="about" id="about">
                 <div class="wrap">
                     <h2>{% trans 'Кто мы' %}</h2>
                     <p>
@@ -185,7 +185,7 @@
                     </p>
                 </div>
             </section>
-            <section class="contacts">
+            <section class="contacts" id="contact">
                 <h2>{% trans 'Контакты' %}</h2>
                 <div class="wrap">
                     <div class="address">
@@ -198,12 +198,25 @@
                         <div>
                             <p>{% trans 'График работы:' %}</p>
                             <p>ПН-ПТ: 9:00-19:00</p>
-                            <p>СБ:9:00-15:00</p>
+                            <p>СБ: 9:00-15:00</p>
                         </div>
                     </div>
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4046237441216!2d33.381140519939194!3d47.91980719956968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40db209e34cb356b%3A0xbb2d052cb1e80f43!2sVulytsya%20Het%CA%B9mans%CA%B9ka%2C%20110%2C%20Kryvyi%20Rih%2C%20Dnipropetrovs&#39;ka%20oblast%2C%2050000!5e0!3m2!1sen!2sua!4v1623133736524!5m2!1sen!2sua" width="540" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
+                </div>
+            </section>
+            <section class="article__block">
+                <h2>{% trans 'Статьи' %}</h2>
+                <div class="wrap">
+                    {% for article in articles %}
+                        <div class="article">
+                            <img src="{{ article.photo.url }}" alt="{{ article.title }}">
+                            <p>{{ article.title }}</p>
+                            <a href="{{ article.get_absolute_url }}">{% trans 'Подробнее' %}</a>
+                        </div>
+                    {% endfor %}
+                    <a href="{% url 'blog' %}">{% trans 'Все статьи' %}</a>
                 </div>
             </section>
         </div>
