@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-20 19:20+0300\n"
+"POT-Creation-Date: 2021-07-17 00:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,26 +21,26 @@ msgstr ""
 "100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
-#: kitchen/templates/kitchen/index.html:17
+#: blog/templates/blog/base.html:16 kitchen/templates/kitchen/index.html:17
 msgid "Главная"
 msgstr "Головна"
 
-#: kitchen/templates/kitchen/index.html:18
+#: blog/templates/blog/base.html:17 kitchen/templates/kitchen/index.html:18
 #: kitchen/templates/kitchen/index.html:141
 msgid "Наши работы"
 msgstr "Наші роботи"
 
-#: kitchen/templates/kitchen/index.html:19
+#: blog/templates/blog/base.html:18 kitchen/templates/kitchen/index.html:19
 #: kitchen/templates/kitchen/index.html:182
 msgid "Кто мы"
 msgstr "Хто ми"
 
-#: kitchen/templates/kitchen/index.html:20
+#: blog/templates/blog/base.html:19 kitchen/templates/kitchen/index.html:20
 #: kitchen/templates/kitchen/index.html:189
 msgid "Контакты"
 msgstr "Контакти"
 
-#: kitchen/templates/kitchen/index.html:30
+#: blog/templates/blog/base.html:25 kitchen/templates/kitchen/index.html:30
 msgid "Закажите бесплатный замер кухни"
 msgstr "Замовте безкоштовний замір кухні"
 
@@ -95,7 +95,6 @@ msgid "Бесплатный выезд дизайнера на замер"
 msgstr "Безкоштовний виїзд дизайнера на замір "
 
 #: kitchen/templates/kitchen/index.html:113
-#: kitchen/templates/kitchen/index.html:158
 msgid "Закажите бесплатный выезд дизайнера на замер"
 msgstr "Безкоштовний виїзд дизайнера на замiр"
 
@@ -123,11 +122,13 @@ msgstr ""
 "Вкажіть Ваш номер телефону - і наш менеджер зв’яжеться з Вами протягом 15 "
 "хвилин"
 
-#: kitchen/templates/kitchen/index.html:161
+#: kitchen/templates/kitchen/index.html:158
 msgid ""
 "Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий "
 "вариант кухни"
-msgstr "Вкажіть бюджет, на який Ви розраховуєте, і ми запропонуємо Вам відповідний варіант кухні"
+msgstr ""
+"Вкажіть бюджет, на який Ви розраховуєте, і ми запропонуємо Вам відповідний "
+"варіант кухні"
 
 #: kitchen/templates/kitchen/index.html:184
 msgid ""
@@ -150,17 +151,17 @@ msgstr "вул. Гетьманська, 110, м. Кривий Ріг"
 msgid "График работы:"
 msgstr "Графік роботи:"
 
-#: kitchen/views.py:19
-msgid "Данные успешно отправлены"
-msgstr "Дані успішно відправлені"
+#: kitchen/templates/kitchen/index.html:210
+msgid "Статьи"
+msgstr "Статті"
 
-#: kitchen/views.py:30
-msgid "Данные не отправлены"
-msgstr "Дані не відправлені"
+#: kitchen/templates/kitchen/index.html:216
+msgid "Подробнее"
+msgstr "Докладніше"
 
-#: kitchen/views.py:37
-msgid "Кухни на заказ"
-msgstr "Кухні на замовлення"
+#: kitchen/templates/kitchen/index.html:219
+msgid "Все статьи"
+msgstr "Всі статті"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"
@@ -173,3 +174,12 @@ msgstr ""
 #: templates/inc/_footer.html:7
 msgid "© 2021 Мебельная мастерская"
 msgstr "© 2021 Меблева майстерня"
+
+#~ msgid "Данные успешно отправлены"
+#~ msgstr "Дані успішно відправлені"
+
+#~ msgid "Данные не отправлены"
+#~ msgstr "Дані не відправлені"
+
+#~ msgid "Кухни на заказ"
+#~ msgstr "Кухні на замовлення"

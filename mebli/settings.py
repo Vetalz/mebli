@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'kitchen.apps.KitchenConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
