@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-20 19:20+0300\n"
+"POT-Creation-Date: 2021-07-22 13:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,100 +22,117 @@ msgstr ""
 "(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: kitchen/templates/kitchen/index.html:17
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:29
 msgid "Главная"
 msgstr "Головна"
 
 #: kitchen/templates/kitchen/index.html:18
-#: kitchen/templates/kitchen/index.html:141
+#: kitchen/templates/kitchen/index.html:142
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:30
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:146
 msgid "Наши работы"
 msgstr "Наші роботи"
 
 #: kitchen/templates/kitchen/index.html:19
-#: kitchen/templates/kitchen/index.html:182
+#: kitchen/templates/kitchen/index.html:183
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:31
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:187
 msgid "Кто мы"
 msgstr "Хто ми"
 
 #: kitchen/templates/kitchen/index.html:20
-#: kitchen/templates/kitchen/index.html:189
+#: kitchen/templates/kitchen/index.html:190
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:32
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:194
 msgid "Контакты"
 msgstr "Контакти"
 
-#: kitchen/templates/kitchen/index.html:30
+#: kitchen/templates/kitchen/index.html:21
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:33
+msgid "Перетяжка"
+msgstr "Перетяжка"
+
+#: kitchen/templates/kitchen/index.html:31
 msgid "Закажите бесплатный замер кухни"
 msgstr "Замовте безкоштовний замір кухні"
 
-#: kitchen/templates/kitchen/index.html:39
+#: kitchen/templates/kitchen/index.html:40
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:52
 msgid "Мебельная мастерская"
 msgstr "Меблева майстерня"
 
-#: kitchen/templates/kitchen/index.html:40
+#: kitchen/templates/kitchen/index.html:41
 msgid "Изготовление кухонь любой сложности"
 msgstr "Виготовлення кухонь будь-якої складності"
 
-#: kitchen/templates/kitchen/index.html:41
+#: kitchen/templates/kitchen/index.html:42
 msgid "от 18 000 грн"
 msgstr "від 18 000 грн"
 
-#: kitchen/templates/kitchen/index.html:45
+#: kitchen/templates/kitchen/index.html:46
 msgid "Оставьте заявку через форму на сайте и получите скидку"
 msgstr "Залиште заявку через форму на сайті та отримайте знижку "
 
-#: kitchen/templates/kitchen/index.html:54
-#: kitchen/templates/kitchen/index.html:137
-#: kitchen/templates/kitchen/index.html:177
+#: kitchen/templates/kitchen/index.html:55
+#: kitchen/templates/kitchen/index.html:138
+#: kitchen/templates/kitchen/index.html:178
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:67
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:142
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:182
 msgid "Позвоните мне"
 msgstr "Зателефонуйте мені"
 
-#: kitchen/templates/kitchen/index.html:60
+#: kitchen/templates/kitchen/index.html:61
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:73
 msgid "Почему клиенты выбирают нас"
 msgstr "Чому клієнти обирають саме нас "
 
-#: kitchen/templates/kitchen/index.html:67
+#: kitchen/templates/kitchen/index.html:68
 msgid "Собственное производство в Кривом Роге"
 msgstr "Власне виробництво у Кривому Розі"
 
-#: kitchen/templates/kitchen/index.html:75
+#: kitchen/templates/kitchen/index.html:76
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:88
 msgid "Лучшие материалы и гарантия качества"
 msgstr "Найкращі матеріали та гарантія якості"
 
-#: kitchen/templates/kitchen/index.html:83
+#: kitchen/templates/kitchen/index.html:84
 msgid "Более 500 кухонь установлено за последние 5 лет"
 msgstr "Понад 500 кухонь встановлено за останні 5 років"
 
-#: kitchen/templates/kitchen/index.html:91
+#: kitchen/templates/kitchen/index.html:92
 msgid "Работаем по договору"
 msgstr "Працюємо за договором"
 
-#: kitchen/templates/kitchen/index.html:99
+#: kitchen/templates/kitchen/index.html:100
 msgid "Изготовим кухни любой сложности"
 msgstr "Виготовимо кухні будь-якої складності "
 
-#: kitchen/templates/kitchen/index.html:107
+#: kitchen/templates/kitchen/index.html:108
 msgid "Бесплатный выезд дизайнера на замер"
 msgstr "Безкоштовний виїзд дизайнера на замір "
 
-#: kitchen/templates/kitchen/index.html:113
-#: kitchen/templates/kitchen/index.html:158
+#: kitchen/templates/kitchen/index.html:114
 msgid "Закажите бесплатный выезд дизайнера на замер"
-msgstr "Безкоштовний виїзд дизайнера на замiр"
+msgstr "Замовте безкоштовний виїзд дизайнера на замiр"
 
-#: kitchen/templates/kitchen/index.html:116
+#: kitchen/templates/kitchen/index.html:117
 msgid "На адресе клиента наш дизайнер сделает:"
 msgstr "Під час візиту до клієнт наш дизайнер зробить:"
 
-#: kitchen/templates/kitchen/index.html:118
+#: kitchen/templates/kitchen/index.html:119
 msgid "Точный замер Вашей кухни"
 msgstr "Точний замір кухні"
 
-#: kitchen/templates/kitchen/index.html:119
-msgid "Предложит матриалы и покажет образцы фасадов"
+#: kitchen/templates/kitchen/index.html:120
+msgid "Предложит материалы и покажет образцы фасадов"
 msgstr "Запропонує матеріали та покаже зразки фасадів"
 
-#: kitchen/templates/kitchen/index.html:120
+#: kitchen/templates/kitchen/index.html:121
 msgid "Составит дизайн-проект Вашей будущей кухни"
 msgstr "Складе дизайн-проект майбутньої кухні"
 
-#: kitchen/templates/kitchen/index.html:125
+#: kitchen/templates/kitchen/index.html:126
 msgid ""
 "Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 "
 "минут"
@@ -123,13 +140,15 @@ msgstr ""
 "Вкажіть Ваш номер телефону - і наш менеджер зв’яжеться з Вами протягом 15 "
 "хвилин"
 
-#: kitchen/templates/kitchen/index.html:161
+#: kitchen/templates/kitchen/index.html:159
 msgid ""
 "Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий "
 "вариант кухни"
-msgstr "Вкажіть бюджет, на який Ви розраховуєте, і ми запропонуємо Вам відповідний варіант кухні"
+msgstr ""
+"Вкажіть бюджет, на який Ви розраховуєте, і ми запропонуємо Вам відповідний "
+"варіант кухні"
 
-#: kitchen/templates/kitchen/index.html:184
+#: kitchen/templates/kitchen/index.html:185
 msgid ""
 "Производитель корпусной мебели с более чем 5-летним опытом работы. Имеем "
 "собственное производство в Кривом Роге, где создаем современные кухни и "
@@ -142,25 +161,91 @@ msgstr ""
 "корпусні меблі. За час нашої роботи було виконано понад 500 замовлень, що "
 "сьогодні є вагомим аргументом для клієнтів під час вибору нашої компанії."
 
-#: kitchen/templates/kitchen/index.html:193
+#: kitchen/templates/kitchen/index.html:194
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:198
 msgid "ул. Гетьманская, 110, г. Кривой Рог"
 msgstr "вул. Гетьманська, 110, м. Кривий Ріг"
 
-#: kitchen/templates/kitchen/index.html:199
+#: kitchen/templates/kitchen/index.html:200
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:204
 msgid "График работы:"
 msgstr "Графік роботи:"
 
-#: kitchen/views.py:19
+#: kitchen/views.py:20 peretyazhka/views.py:18
 msgid "Данные успешно отправлены"
 msgstr "Дані успішно відправлені"
 
-#: kitchen/views.py:30
+#: kitchen/views.py:33 peretyazhka/views.py:32
 msgid "Данные не отправлены"
 msgstr "Дані не відправлені"
 
-#: kitchen/views.py:37
+#: kitchen/views.py:40
 msgid "Кухни на заказ"
 msgstr "Кухні на замовлення"
+
+#: peretyazhka/forms.py:11
+msgid "Ваше имя"
+msgstr "Ваше ім’я"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:43
+msgid "Консультация с нашим специалистом"
+msgstr "Консультація з нашим спеціалістом"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:53
+msgid "Перетяжка мебели любой сложности!"
+msgstr "Перетяжка меблів будь-якої складності!"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:54
+msgid "Доступные цены!"
+msgstr "Доступні ціни!"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:58
+msgid "Оставить заявку"
+msgstr "Залишити заявку"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:80
+msgid "Опыт работы более 20 лет"
+msgstr "Досвід роботи понад 20 років"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:96
+msgid "Большой выбор тканей"
+msgstr "Широкий вибір тканин"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:104
+msgid "Вывоз и доставка мебели бесплатно "
+msgstr "Вивіз та доставка меблів безкоштовно "
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:112
+msgid "Выезд дизайнера бесплатно"
+msgstr "Безкоштовний виїзд дизайнера"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:120
+msgid "Ремонт любой сложности!"
+msgstr "Ремонт будь-якої складності"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:126
+msgid "Закажите бесплатную консультацию со специалистом "
+msgstr "Замовте безкоштовну консультацію зі спеціалістом "
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:163
+msgid "Подарите вторую жизнь вашей любимой мебели!"
+msgstr "Подаруйте друге життя вашим улюбленим меблям!"
+
+#: peretyazhka/templates/peretyazhka/peretyazhka.html:189
+msgid ""
+"Компания, специализирующаяся на ремонте и перетяжке мягкой мебели любой "
+"сложности, с опытом работы более 20 лет. Такой долгий период времени мы "
+"радуем наших клиентов, благодаря ответственному подходу к работе, вниманию к "
+"пожеланиям заказчика и лучшему качеству услуг на рынке Кривого Рога."
+msgstr ""
+"Компанія, що спеціалізується на ремонті та перетяжці м’яких меблів будь-якої складності,"
+"з досвідом роботи понад 20 років. Такий довгий період часу ми даємо шанс на друге життя"
+"улюбленим меблям наших клієнтів, завдяки відповідальному підходу до роботи, врахуванню"
+"побажань замовників і найкращій якості послуг на ринку Кривого Рогу"
+
+#: peretyazhka/views.py:39
+msgid "Перетяжка мебели"
+msgstr "Перетяжка меблів"
 
 #: templates/admin/base_site.html:3
 msgid "Django site admin"

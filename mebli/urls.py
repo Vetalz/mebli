@@ -21,10 +21,12 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('peretyazhka/', include('peretyazhka.urls'))
 ]
 
 urlpatterns += i18n_patterns(
     path('', include('kitchen.urls')),
+    path('peretyazhka', include('peretyazhka.urls')),
 )
 
 if settings.DEBUG:

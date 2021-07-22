@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
+{% block description %}
+    "Перетяжка мягкой мебели любой сложности"
+{% endblock %}
+
+{% block keywords %}
+    "Перетяжка мебели, Заказать перетяжку мебели в Кривом Роге, Заказать перетяжку"
+{% endblock %}
+
 {% block title %}
     {{ title }}
+{% endblock %}
+
+{% block background %}
+    paralax2
 {% endblock %}
 
 {% block header %}
@@ -14,21 +26,21 @@
                 </div>
                 <nav class="menu__body">
                     <ul class="menu__list">
-                        <li><a data-goto=".top" href="{% url 'home' %}" class="menu__link">{% trans 'Главная' %}</a></li>
+                        <li><a href="{% url 'home' %}" class="menu__link">{% trans 'Главная' %}</a></li>
                         <li><a data-goto=".work" href="#" class="menu__link">{% trans 'Наши работы' %}</a></li>
                         <li><a data-goto=".about" href="#" class="menu__link">{% trans 'Кто мы' %}</a></li>
                         <li><a data-goto=".contacts" href="#" class="menu__link">{% trans 'Контакты' %}</a></li>
-                        <li><a href="{% url 'peretyazhka' %}" class="menu__link">{% trans 'Перетяжка' %}</a></li>
+                        <li><a data-goto=".top" href="{% url 'peretyazhka' %}" class="menu__link">{% trans 'Перетяжка' %}</a></li>
                     </ul>
                     <ul class="lang">
-                        <li><a href="/uk">ua</a></li>
-                        <li><a href="/ru">ru</a></li>
+                        <li><a href="/uk/peretyazhka">ua</a></li>
+                        <li><a href="/ru/peretyazhka">ru</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="header__phone">
-                <a href="tel:380989676756">+38 (098) 967 67 56</a>
-                <span>{% trans 'Закажите бесплатный замер кухни' %}</span>
+                <a href="tel:30974495531">+38 (097) 449 55 31</a>
+                <span>{% trans 'Консультация с нашим специалистом' %}</span>
             </div>
         </div>
     </header>
@@ -38,12 +50,12 @@
     <main class="page">
         <section class="top__block top">
             <h1 class="top__title">{% trans 'Мебельная мастерская' %}</h1>
-            <h2>{% trans 'Изготовление кухонь любой сложности' %}</h2>
-            <span>{% trans 'от 18 000 грн' %}</span>
+            <h2>{% trans 'Перетяжка мебели любой сложности!' %}</h2>
+            <span>{% trans 'Доступные цены!' %}</span>
             <form class="top__form" method="post">
                 <div class="container">
                     {% csrf_token %}
-                    <label for="{{ form.number_phone.name }}">{% trans 'Оставьте заявку через форму на сайте и получите скидку' %} <span>-10%</span></label>
+                    <label for="{{ form.number_phone.name }}" class="label_v2">{% trans 'Оставить заявку' %}</label>
                     {{ form.number_phone }}
                     {% if messages %}
                         <ul class="messages">
@@ -62,10 +74,10 @@
                 <div class="why__wrap">
                     <div class="why__item">
                         <div class="why__icon">
-                            <i class="fi fi-home"></i>
+                            <i class="fi fi-date"></i>
                         </div>
                         <span class="why__title">
-                            {% trans 'Собственное производство в Кривом Роге' %}
+                            {% trans 'Опыт работы более 20 лет' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -81,23 +93,15 @@
                             <i class="fi fi-star"></i>
                         </div>
                         <span class="why__title">
-                            {% trans 'Более 500 кухонь установлено за последние 5 лет' %}
+                            {% trans 'Большой выбор тканей' %}
                         </span>
                     </div>
                     <div class="why__item">
                         <div class="why__icon">
-                            <i class="fi fi-file-1"></i>
+                            <i class="fi fi-truck""></i>
                         </div>
                         <span class="why__title">
-                            {% trans 'Работаем по договору' %}
-                        </span>
-                    </div>
-                    <div class="why__item">
-                        <div class="why__icon">
-                            <i class="fi fi-check"></i>
-                        </div>
-                        <span class="why__title">
-                            {% trans 'Изготовим кухни любой сложности' %}
+                            {% trans 'Вывоз и доставка мебели бесплатно ' %}
                         </span>
                     </div>
                     <div class="why__item">
@@ -105,25 +109,25 @@
                             <i class="fi fi-male"></i>
                         </div>
                         <span class="why__title">
-                            {% trans 'Бесплатный выезд дизайнера на замер' %}
+                            {% trans 'Выезд дизайнера бесплатно' %}
+                        </span>
+                    </div>
+                    <div class="why__item">
+                        <div class="why__icon">
+                            <i class="fi fi-check"></i>
+                        </div>
+                        <span class="why__title">
+                            {% trans 'Ремонт любой сложности!' %}
                         </span>
                     </div>
                 </div>
             </section>
             <section class="form" id="2">
-                <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
-                <form class="form__wrap" method="post" >
-                    <div class="form__text">
-                        <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
-                        <ul>
-                            <li>{% trans 'Точный замер Вашей кухни' %}</li>
-                            <li>{% trans 'Предложит материалы и покажет образцы фасадов' %}</li>
-                            <li>{% trans 'Составит дизайн-проект Вашей будущей кухни' %}</li>
-                        </ul>
-                    </div>
-                    <div class="form__form">
+                <h2>{% trans 'Закажите бесплатную консультацию со специалистом ' %}</h2>
+                <form class="form__wrap v2" method="post" >
+                    <div class="form__form v2">
                         {% csrf_token %}
-                        <label for="{{ form.number_phone.name }}">{% trans 'Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут' %}</label>
+                        {{ form.name }}
                         {{ form.number_phone }}
 
                         {% if messages %}
@@ -134,7 +138,7 @@
                         </ul>
                         {% endif %}
                     </div>
-                    <input type="hidden" name="form_number" value="2">
+                    <input type="hidden" name="form_number" value="3">
                     <input type="submit" value="{% trans 'Позвоните мне' %}">
                 </form>
             </section>
@@ -156,14 +160,14 @@
                 </div>
             </section>
             <section class="form" id="3">
-                <h2>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</h2>
+                <h2>{% trans 'Подарите вторую жизнь вашей любимой мебели!' %}</h2>
                 <form class="form__wrap v2" method="post">
 {#                    <div class="form__text">#}
 {#                        <p>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</p>#}
 {#                    </div>#}
                     <div class="form__form v2">
                         {% csrf_token %}
-                        {{ form.budget }}
+                        {{ form.name }}
                         {{ form.number_phone }}
 
                         {% if messages %}
@@ -182,7 +186,7 @@
                 <div class="wrap">
                     <h2>{% trans 'Кто мы' %}</h2>
                     <p>
-                        {% trans 'Производитель корпусной мебели с более чем 5-летним опытом работы. Имеем собственное производство в Кривом Роге, где создаем современные кухни и другую качественную корпусную мебель. За время нашей работы было выполнено более 500 заказов, что сегодня является весомым аргументом для клиентов при выборе нашей компании.' %}
+                        {% trans 'Компания, специализирующаяся на ремонте и перетяжке мягкой мебели любой сложности, с опытом работы более 20 лет. Такой долгий период времени мы радуем наших клиентов, благодаря ответственному подходу к работе, вниманию к пожеланиям заказчика и лучшему качеству услуг на рынке Кривого Рога.' %}
                     </p>
                 </div>
             </section>
@@ -194,7 +198,7 @@
                             <p>{% trans 'ул. Гетьманская, 110, г. Кривой Рог' %}</p>
                         </div>
                         <div>
-                            <p>Телефон: +38 (098) 967 67 56</p>
+                            <p>Телефон: +38 (097) 449 55 31</p>
                         </div>
                         <div>
                             <p>{% trans 'График работы:' %}</p>
@@ -220,5 +224,3 @@ $(document).ready(function(){
 </script>
 {% endif %}
 {% endblock %}
-
-

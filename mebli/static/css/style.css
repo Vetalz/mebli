@@ -34,7 +34,7 @@ body._lock {
 }
 
 .header__menu {
-    width: 65%;
+    width: 70%;
 }
 
 .lang {
@@ -111,6 +111,15 @@ body._lock {
     background-size: cover;
 }
 
+.paralax2 {
+    background: url("../img/background2.webp");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .background__opacity {
     content: '';
     display: block;
@@ -133,20 +142,20 @@ body._lock {
 }
 
 h1 {
-    font-size: calc(3vw + 20px);
+    font-size: calc(1.5vw + 20px);
     text-align: center;
     margin-top: 10vh;
 }
 
 .top__block h2 {
-    font-size: calc(1.5vw + 15px);
+    font-size: calc(2vw + 25px);
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 7vh;
 }
 
 .top__block>span {
     display: block;
-    font-size: calc(2vw + 20px);
+    font-size: calc(1.5vw + 15px);
     text-align: center;
     margin-top: 5vh;
 }
@@ -170,6 +179,10 @@ h1 {
 
 .top__form .container label {
     width: 300px;
+}
+
+.top__form .container .label_v2 {
+    width: 200px;
 }
 
 .top__form .container label span {

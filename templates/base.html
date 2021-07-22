@@ -3,9 +3,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Изготовление кухни любой сложности. Собственное производство в Кривом Роге.">
+    <meta name="description" content={% block description %}"Изготовление кухни любой сложности. Собственное производство в Кривом Роге."{% endblock %}>
     <meta name="robots" content="index,follow">
-    <meta name="keywords" content="Кухни на заказ, Заказать кухню в Кривом Роге, Заказать замер кухни, Купить кухню">
+    <meta name="keywords" content={%block keywords %}"Кухни на заказ, Заказать кухню в Кривом Роге, Заказать замер кухни, Купить кухню"{% endblock %}>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
@@ -22,7 +22,7 @@
     <title>{% block title %}{% endblock %}</title>
     <script src="//code-eu1.jivosite.com/widget/zAktC8sPVP" async></script>
 </head>
-<body class="paralax">
+<body class={% block background %}"paralax"{% endblock %}>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WB5NRDM"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
