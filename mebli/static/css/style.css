@@ -704,4 +704,10 @@ li.error {
         background-size: auto;
         background-color: rgba(54, 41, 23, .55);
     }
+
+    .paralax2 {
+        background-attachment: scroll;
+        background-size: cover;
+        background-color: rgba(54, 41, 23, .55);
+    }
 }
