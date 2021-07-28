@@ -94,7 +94,7 @@ body._lock {
 
 .menu__link {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
     color: #362917;
 }
 
@@ -183,6 +183,7 @@ h1 {
 
 .top__form .container .label_v2 {
     width: 200px;
+    font-size: 23px;
 }
 
 .top__form .container label span {
