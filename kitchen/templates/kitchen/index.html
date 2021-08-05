@@ -40,7 +40,7 @@
             <h1 class="top__title">{% trans 'Мебельная мастерская' %}</h1>
             <h2>{% trans 'Изготовление кухонь любой сложности' %}</h2>
             <span>{% trans 'от 18 000 грн' %}</span>
-            <form class="top__form" method="post">
+            <form class="top__form" method="post" id="kitchen_1">
                 <div class="container">
                     {% csrf_token %}
                     <label for="{{ form.number_phone.name }}">{% trans 'Оставьте заявку через форму на сайте и получите скидку' %} <span>-10%</span></label>
@@ -112,7 +112,7 @@
             </section>
             <section class="form" id="2">
                 <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
-                <form class="form__wrap" method="post" >
+                <form class="form__wrap" method="post" id="kitchen_2">
                     <div class="form__text">
                         <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
                         <ul>
@@ -157,7 +157,7 @@
             </section>
             <section class="form" id="3">
                 <h2>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</h2>
-                <form class="form__wrap v2" method="post">
+                <form class="form__wrap v2" method="post" id="kitchen_3">
 {#                    <div class="form__text">#}
 {#                        <p>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</p>#}
 {#                    </div>#}

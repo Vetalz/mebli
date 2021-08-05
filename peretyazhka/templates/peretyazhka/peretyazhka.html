@@ -52,7 +52,7 @@
             <h1 class="top__title">{% trans 'Мебельная мастерская' %}</h1>
             <h2>{% trans 'Перетяжка мебели любой сложности!' %}</h2>
             <span>{% trans 'Доступные цены!' %}</span>
-            <form class="top__form" method="post">
+            <form class="top__form" method="post" id="peretyazhka_1">
                 <div class="container">
                     {% csrf_token %}
                     <label for="{{ form.number_phone.name }}" class="label_v2">{% trans 'Оставить заявку' %}</label>
@@ -124,7 +124,7 @@
             </section>
             <section class="form" id="2">
                 <h2>{% trans 'Закажите бесплатную консультацию со специалистом ' %}</h2>
-                <form class="form__wrap v2" method="post" >
+                <form class="form__wrap v2" method="post" id="peretyazhka_2">
                     <div class="form__form v2">
                         {% csrf_token %}
                         {{ form.name }}
@@ -161,7 +161,7 @@
             </section>
             <section class="form" id="3">
                 <h2>{% trans 'Подарите вторую жизнь вашей любимой мебели!' %}</h2>
-                <form class="form__wrap v2" method="post">
+                <form class="form__wrap v2" method="post" id="peretyazhka_3">
 {#                    <div class="form__text">#}
 {#                        <p>{% trans 'Укажите бюджет, на который Вы рассчитываете, и мы предложим Вам подходящий вариант кухни' %}</p>#}
 {#                    </div>#}
