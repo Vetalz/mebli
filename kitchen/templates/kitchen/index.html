@@ -43,7 +43,7 @@
             <form class="top__form" method="post" id="kitchen_1">
                 <div class="container">
                     {% csrf_token %}
-                    <label for="{{ form.number_phone.name }}">{% trans 'Оставьте заявку через форму на сайте и получите скидку' %} <span>-10%</span></label>
+                    <label for="{{ form.number_phone.name }}">{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</label>
                     {{ form.number_phone }}
                     {% if messages %}
                         <ul class="messages">
