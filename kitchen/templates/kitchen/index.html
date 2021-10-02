@@ -57,6 +57,51 @@
             </form>
         </section>
         <div class="content">
+            <section class="work__block work">
+                <h2>{% trans 'Наши работы' %}</h2>
+                <div class="wrap">
+                    <div class="work__body">
+                        <div class="slider-for">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                        <div class="slider-nav">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="form" id="2">
+                <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
+                <form class="form__wrap" method="post" id="kitchen_2">
+                    <div class="form__text">
+                        <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
+                        <ul>
+                            <li>{% trans 'Точный замер Вашей кухни' %}</li>
+                            <li>{% trans 'Предложит материалы и покажет образцы фасадов' %}</li>
+                            <li>{% trans 'Составит дизайн-проект Вашей будущей кухни' %}</li>
+                        </ul>
+                    </div>
+                    <div class="form__form">
+                        {% csrf_token %}
+                        <label for="{{ form.number_phone.name }}">{% trans 'Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут' %}</label>
+                        {{ form.number_phone }}
+
+                        {% if messages %}
+                        <ul class="messages">
+                            {% for message in messages %}
+                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+                    </div>
+                    <input type="hidden" name="form_number" value="2">
+                    <input type="submit" value="{% trans 'Позвоните мне' %}">
+                </form>
+            </section>
             <section class="why__block why">
                 <h2 class="why__title">{% trans 'Почему клиенты выбирают нас' %}</h2>
                 <div class="why__wrap">
@@ -107,51 +152,6 @@
                         <span class="why__title">
                             {% trans 'Бесплатный выезд дизайнера на замер' %}
                         </span>
-                    </div>
-                </div>
-            </section>
-            <section class="form" id="2">
-                <h2>{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</h2>
-                <form class="form__wrap" method="post" id="kitchen_2">
-                    <div class="form__text">
-                        <p>{% trans 'На адресе клиента наш дизайнер сделает:' %}</p>
-                        <ul>
-                            <li>{% trans 'Точный замер Вашей кухни' %}</li>
-                            <li>{% trans 'Предложит материалы и покажет образцы фасадов' %}</li>
-                            <li>{% trans 'Составит дизайн-проект Вашей будущей кухни' %}</li>
-                        </ul>
-                    </div>
-                    <div class="form__form">
-                        {% csrf_token %}
-                        <label for="{{ form.number_phone.name }}">{% trans 'Укажите Ваш номер телефона - и наш менеджер свяжется с Вами в течение 15 минут' %}</label>
-                        {{ form.number_phone }}
-
-                        {% if messages %}
-                        <ul class="messages">
-                            {% for message in messages %}
-                            <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                            {% endfor %}
-                        </ul>
-                        {% endif %}
-                    </div>
-                    <input type="hidden" name="form_number" value="2">
-                    <input type="submit" value="{% trans 'Позвоните мне' %}">
-                </form>
-            </section>
-            <section class="work__block work">
-                <h2>{% trans 'Наши работы' %}</h2>
-                <div class="wrap">
-                    <div class="work__body">
-                        <div class="slider-for">
-                            {% for item in photos %}
-                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
-                            {% endfor %}
-                        </div>
-                        <div class="slider-nav">
-                            {% for item in photos %}
-                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
-                            {% endfor %}
-                        </div>
                     </div>
                 </div>
             </section>
