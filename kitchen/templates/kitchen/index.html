@@ -57,6 +57,308 @@
             </form>
         </section>
         <div class="content">
+            <section class="quiz">
+                <h2>Расчет стоимости кухни по индивидуальным параметрам</h2>
+                <div class="wrap">
+                    <div class="question" id="q_1">
+                        <h4>Вопрос 1 из 7</h4>
+                        <div class="progress_bar"></div>
+                        <p>Выберите планировку кухни</p>
+                        <div class="options">
+                            <div class="option">
+                                <label for="kitchen_type-1" class="option_img">
+                                    <img src="{% static 'img/pryamaya.jpg' %}" alt="прямая кухня">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_type-1" name="kitchen_type" value="Прямая" checked
+                                           onclick="check_type(this, 'plan')">
+                                    <label for="kitchen_type-1">Прямая</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_type-2" class="option_img">
+                                    <img src="{% static 'img/uglovay.jpg' %}" alt="угловая кухня">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_type-2" name="kitchen_type" value="Угловая"
+                                           onclick="check_type(this, 'plan')">
+                                    <label for="kitchen_type-2">Угловая</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_type-3" class="option_img">
+                                    <img src="{% static 'img/p-obraznaya.jpg' %}" alt="п-образная">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_type-3" name="kitchen_type" value="П-образная"
+                                           onclick="check_type(this, 'plan')">
+                                    <label for="kitchen_type-3">П-образная</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_up_1" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="q_2">
+                        <h4>Вопрос 2 из 7</h4>
+                        <div class="progress_bar" style="width: 25%"></div>
+                        <p>Выберите материалы фасадов </p>
+                        <div class="options">
+                            <div class="option">
+                                <label for="kitchen_facade-1" class="option_img">
+                                    <img src="{% static 'img/dsp.jpg' %}" alt="ДСП">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_facade-1" name="kitchen_facade" value="ДСП" checked
+                                        onclick="check_type(this, 'material')">
+                                    <label for="kitchen_facade-1">ДСП (эконом)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_facade-2" class="option_img">
+                                    <img src="{% static 'img/mdf-plenka.jpg' %}" alt="МДФ пленка">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_facade-2" name="kitchen_facade" value="МДФ в пленке"
+                                           onclick="check_type(this, 'material')">
+                                    <label for="kitchen_facade-2">МДФ в пленке (стандарт)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_facade-3" class="option_img">
+                                    <img src="{% static 'img/mdf-rezba.jpg' %}" alt="МДФ резьба">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_facade-3" name="kitchen_facade" value="Пластик"
+                                           onclick="check_type(this, 'material')">
+                                    <label for="kitchen_facade-4">МДФ в пленке с фрезеровкой (стандарт)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_facade-4" class="option_img">
+                                    <img src="{% static 'img/mdf-kraska.jpg' %}" alt="МДФ краска">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_facade-4" name="kitchen_facade" value="МДФ в краске"
+                                           onclick="check_type(this, 'material')">
+                                    <label for="kitchen_facade-4">МДФ в краске (премиум)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_down_2" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_2" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="q_3">
+                        <h4>Вопрос 3 из 7</h4>
+                        <div class="progress_bar" style="width:37.5%"></div>
+                        <p>Выберите материал столешницы </p>
+                        <div class="options">
+                            <div class="option">
+                                <label for="kitchen_table-1" class="option_img">
+                                    <img src="{% static 'img/vlagostoikay.jpg' %}" alt="Столешница влагостойкая">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_table-1" name="kitchen_table"
+                                           value="Столешница влагостойкая" checked onclick="check_type(this, 'table')">
+                                    <label for="kitchen_table-1">Столешница влагостойкая (стандарт)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_table-2" class="option_img">
+                                    <img src="{% static 'img/iskust-kamen.jpg' %}" alt="Искусственный камень">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_table-2" name="kitchen_table"
+                                           value="Искусственный камень" onclick="check_type(this, 'table')">
+                                    <label for="kitchen_table-2">Искусственный камень (премиум)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_table-3" class="option_img">
+                                    <img src="{% static 'img/quartzevi-kamen.jpg' %}" alt="Кварцевый камень">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_table-3" name="kitchen_table"
+                                           value="Кварцевый камень" onclick="check_type(this, 'table')">
+                                    <label for="kitchen_table-3">Кварцевый камень (эксклюзив) </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_down_3" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_3" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="q_4">
+                        <h4>Вопрос 4 из 7</h4>
+                        <div class="progress_bar" style="width:50%"></div>
+                        <p>Выберите тип фурнитуры</p>
+                        <div class="options">
+                            <div class="option">
+                                <label for="kitchen_fittings-1" class="option_img">
+                                    <img src="{% static 'img/bez-dovodcik.jpg' %}" alt="Без доводчиков">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_fittings-1" name="kitchen_fittings"
+                                           value="Без доводчиков" checked onclick="check_type(this, 'fittings')">
+                                    <label for="kitchen_fittings-1">Без доводчиков (эконом)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_fittings-2" class="option_img">
+                                    <img src="{% static 'img/dovodcik.jpg' %}" alt="С доводчиками">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_fittings-2" name="kitchen_fittings"
+                                           value="С доводчиками" onclick="check_type(this, 'fittings')">
+                                    <label for="kitchen_table-2">С доводчиками (стандарт)</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_fittings-3" class="option_img">
+                                    <img src="{% static 'img/blum.jpg' %}" alt="Blum, Hettich">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_fittings-3" name="kitchen_fittings"
+                                           value="Blum, Hettich" onclick="check_type(this, 'fittings')">
+                                    <label for="kitchen_fittings-3">Blum, Hettich (премиум)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_down_4" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_4" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="q_5">
+                        <h4>Вопрос 5 из 7</h4>
+                        <div class="progress_bar" style="width:62.5%"></div>
+                        <p>Какая цветовая палитра вам нравится?</p>
+                        <div class="options">
+                            <div class="option">
+                                <label for="kitchen_palette-1" class="option_img">
+                                    <img src="{% static 'img/svetlaya.jpg' %}" alt="Светлая кухня">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_palette-1" name="kitchen_palette"
+                                           value="Светлая" checked onclick="check_type(this, 'color')">
+                                    <label for="kitchen_palette-1">Светлая</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_palette-2" class="option_img">
+                                    <img src="{% static 'img/temnaya.jpg' %}" alt="Темная кухня">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_palette-2" name="kitchen_palette"
+                                           value="Темная" onclick="check_type(this, 'color')">
+                                    <label for="kitchen_palette-2">Темная</label>
+                                </div>
+                            </div>
+                            <div class="option">
+                                <label for="kitchen_palette-3" class="option_img">
+                                    <img src="{% static 'img/cvet.jpg' %}" alt="Цветная кухня">
+                                </label>
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_palette-3" name="kitchen_palette"
+                                           value="Цветная" onclick="check_type(this, 'color')">
+                                    <label for="kitchen_palette-3">Цветная</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_down_5" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_5" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+                    <div class="question hidden" id="q_6">
+                        <h4>Вопрос 6 из 7</h4>
+                        <div class="progress_bar" style="width:75%"></div>
+                        <p>Введите ориентировочные размеры</p>
+                        <img src="{% static 'img/dlina.jpg' %}" alt="Длина кухни" class="img_size">
+                        <div class="options">
+                            <div class="option option_text">
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_size-1" name="kitchen_size" value="До 3 метров"
+                                           checked onclick="check_type(this, 'size')">
+                                    <label for="kitchen_size-1">До 3 метров</label>
+                                </div>
+                            </div>
+                            <div class="option option_text">
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_size-2" name="kitchen_size"
+                                           value="3-5 метров" onclick="check_type(this, 'size')">
+                                    <label for="kitchen_size-2">3-5 метров</label>
+                                </div>
+                            </div>
+                            <div class="option option_text">
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_size-3" name="kitchen_size"
+                                           value="Более 5 метров" onclick="check_type(this, 'size')">
+                                    <label for="kitchen_size-3">Более 5 метров</label>
+                                </div>
+                            </div>
+                            <div class="option option_text">
+                                <div class="form_radio">
+                                    <input type="radio" id="kitchen_size-4" name="kitchen_size"
+                                           value="Не знаю размеров" onclick="check_type(this, 'size')">
+                                    <label for="kitchen_size-4">Не знаю размеров</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button_quiz">
+                            <button type="button" id="btn_q_down_6" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_6" onclick="next_q(this.id, 1)">Далее</button>
+                        </div>
+                    </div>
+{#                    <div class="question hidden" id="q_7">#}
+{#                        <h4>Вопрос 7 из 7</h4>#}
+{#                        <div class="progress_bar" style="width: 87.5%"></div>#}
+{#                        <p>Когда планируете установить кухню?</p>#}
+{#                        <div class="options">#}
+{#                            <div class="option option_text">#}
+{#                                <div class="form_radio">#}
+{#                                    <input type="radio" id="kitchen_term-1" name="kitchen_term" value="в этом месяце" checked>#}
+{#                                    <label for="kitchen_term-1">В этом месяце</label>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="option option_text">#}
+{#                                <div class="form_radio">#}
+{#                                    <input type="radio" id="kitchen_term-2" name="kitchen_term" value="В следующем месяце">#}
+{#                                    <label for="kitchen_term-2">В следующем месяце</label>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <div class="option option_text">#}
+{#                                <div class="form_radio">#}
+{#                                    <input type="radio" id="kitchen_term-3" name="kitchen_term" value="Пока не определились">#}
+{#                                    <label for="kitchen_term-3">Пока не определились</label>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="button_quiz">#}
+{#                            <button type="button" id="btn_q_down_7" onclick="next_q(this.id, 0)">Назад</button>#}
+{#                            <button type="button" id="btn_q_up_7" onclick="next_q(this.id, 1)">Далее</button>#}
+{#                        </div>#}
+{#                    </div>#}
+                    <div class="question hidden" id="q_7">
+                        <h4>Мы уже приступили к расчету кухни</h4>
+                        <div class="progress_bar" style="width: 100%"></div>
+                        <p>Оставьте номер телефона и в течении часа мы пришлём вам варианты кухонь</p>
+                        <div class="options phone_quiz">
+                            <label>
+                                <input type="text" id="phone">
+                            </label>
+                        </div>
+                        <p id="error" class="hidden">Введите корректный номер телефона</p>
+                        <div class="button_quiz">
+                            <button type="button" onclick="send_request()">Получить результат</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="work__block work">
                 <h2>{% trans 'Наши работы' %}</h2>
                 <div class="wrap">

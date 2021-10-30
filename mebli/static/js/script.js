@@ -1,7 +1,7 @@
 "use strict"
 
 // прокрутка при клике
-const menuLinks = document.querySelectorAll('.menu__link[data-goto');
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
@@ -38,3 +38,85 @@ if (iconMenu){
         menuBody.classList.toggle('_active');
     });
 }
+
+// маска телефона
+let phoneMask = IMask(
+  document.getElementById('phone'), {
+    mask: '+{38}(000)000-00-00',
+    lazy: false,
+    placeholderChar: '_'
+  });
+
+
+// квиз
+let answer = {
+    kitchen_plan: 'Прямая',
+    kitchen_material: 'ДСП',
+    kitchen_table: 'Столешница влагостойкая',
+    kitchen_fittings: 'Без доводчиков',
+    kitchen_color: 'Светлая',
+    kitchen_size: 'До 3 метров',
+    kitchen_phone: ''
+}
+
+function next_q(id_button, direction){
+    let id_q = Number(id_button.split('_')[3]);
+    let prev_q;
+    let next_q;
+    if(direction === 1){
+        prev_q = document.getElementById(`q_${id_q}`)
+        next_q = document.getElementById(`q_${id_q + 1}`)
+    }
+    else{
+        prev_q = document.getElementById(`q_${id_q - 1}`)
+        next_q = document.getElementById(`q_${id_q}`)
+    }
+
+    prev_q.classList.toggle('hidden')
+    next_q.classList.toggle('hidden')
+}
+
+function check_type(el, question){
+    switch (question){
+        case 'plan':
+            answer['kitchen_plan'] = el.value;
+            break;
+        case 'material':
+            answer['kitchen_material'] = el.value;
+            break;
+        case 'table':
+            answer['kitchen_table'] = el.value;
+            break;
+        case 'fittings':
+            answer['kitchen_fittings'] = el.value;
+            break;
+        case 'color':
+            answer['kitchen_color'] = el.value;
+            break;
+        case 'size':
+            answer['kitchen_size'] = el.value;
+            break;
+    }
+    console.log(answer);
+}
+
+function validate_phone(phone){
+    let result = phone.match(/^\+38\(\d{3}\)\d{3}-\d{2}-\d{2}$/);
+    if (result){
+        return true;
+    }
+}
+
+function send_request (){
+    let el_phone = document.getElementById('phone');
+    let el_error = document.getElementById('error');
+    let result = validate_phone(el_phone.value)
+    if (result){
+        answer['kitchen_phone'] = el_phone.value;
+        el_error.classList.add('hidden')
+    }
+    else{
+        el_error.classList.remove('hidden')
+    }
+}
+

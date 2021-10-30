@@ -516,7 +516,127 @@ li.success {
 li.error {
     color: #ff0000;
 }
+/*quiz*/
+.hidden {
+    display: none;
+}
+.quiz {
+    background-color: #E9E7DB;
+    color: #362917;
+    font-size: 20px;
+    padding-top: 60px;
+}
 
+.quiz h2 {
+    text-align: center;
+}
+
+.quiz h2::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 45px;
+    background-color: #362917;
+    margin: 30px auto 50px;
+}
+
+.quiz .wrap {
+    max-width: 980px;
+    margin: 0 auto 60px;
+    background-color: #362917;
+    color: #E9E7DB;
+    padding: 30px 30px;
+}
+
+.progress_bar {
+    background-color: #E9E7DB;
+    height: 1px;
+    width: 14.286%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.option {
+    width: 50%;
+    padding: 10px;
+}
+
+.option_img img {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type='radio']:after {
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #E9E7DB;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #E9E7DB;
+}
+
+input[type='radio']:checked:after {
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #362917;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #E9E7DB;
+}
+
+.button_quiz {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.button_quiz button {
+    background-color: green;
+    border: none;
+    color: #E9E7DB;
+    padding: 15px 15px;
+    cursor: pointer;
+}
+
+.phone_quiz {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 20px;
+}
+
+.phone_quiz input {
+    color: #E9E7DB;
+    border-bottom: 1px solid #E9E7DB;
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.img_size {
+    margin: 15px auto 0;
+}
+
+#error {
+    text-align: center;
+    color: red;
+    margin-bottom: 30px;
+}
+/*end quiz*/
 
 @media (max-width: 650px) {
     .container {
@@ -564,6 +684,14 @@ li.error {
 
     .address {
         font-size: 15px;
+    }
+
+    .option_text {
+    width: 100%;
+    }
+
+    .form_radio {
+        font-size: 13px;
     }
 }
 
