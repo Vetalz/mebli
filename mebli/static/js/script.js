@@ -52,7 +52,7 @@ let phoneMask = IMask(
 let answer = {
     kitchen_plan: 'Прямая',
     kitchen_material: 'ДСП',
-    kitchen_table: 'Столешница влагостойкая',
+    kitchen_table: 'Влагостойкая',
     kitchen_fittings: 'Без доводчиков',
     kitchen_color: 'Светлая',
     kitchen_size: 'До 3 метров',
@@ -107,16 +107,43 @@ function validate_phone(phone){
     }
 }
 
-function send_request (){
+function send_request (el){
+    let token =  $('input[name="csrfmiddlewaretoken"]').attr('value');
     let el_phone = document.getElementById('phone');
     let el_error = document.getElementById('error');
+    let el_last_quiz = document.getElementById('q_7');
+    let el_end_quiz = document.getElementById('q_8');
     let result = validate_phone(el_phone.value)
     if (result){
         answer['kitchen_phone'] = el_phone.value;
-        el_error.classList.add('hidden')
+        el.classList.toggle('hidden');
+        el_error.classList.add('hidden');
+        $.ajax({
+            type: "POST",
+            headers: {'X-CSRFToken': token},
+            url: "/quiz/",
+            data: {
+                'plan': answer['kitchen_plan'],
+                'material': answer['kitchen_material'],
+                'table': answer['kitchen_table'],
+                'fittings': answer['kitchen_fittings'],
+                'color': answer['kitchen_color'],
+                'size': answer['kitchen_size'],
+                'phone': answer['kitchen_phone']
+            },
+            success: function (response) {
+                if(response.status === 'OK'){
+                    el_last_quiz.classList.add('hidden');
+                    el_end_quiz.classList.remove('hidden');
+                }
+            }
+        });
     }
     else{
         el_error.classList.remove('hidden')
     }
 }
+
+
+
 

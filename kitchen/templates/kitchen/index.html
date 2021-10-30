@@ -354,8 +354,12 @@
                         </div>
                         <p id="error" class="hidden">Введите корректный номер телефона</p>
                         <div class="button_quiz">
-                            <button type="button" onclick="send_request()">Получить результат</button>
+                            <button type="button" onclick="send_request(this)">Получить результат</button>
                         </div>
+                    </div>
+                    <div class="question hidden" id="q_8">
+                        <h4>Спасибо за оказанное доверие, в течении часа мы подготовим и вышлем результаты</h4>
+                        <img src="{% static 'img/chasy-na-kuhnyu.jpg' %}" alt="Часы на кухне" class="img_size">
                     </div>
                 </div>
             </section>

@@ -1,5 +1,7 @@
+import json
+
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 
 from .models import Gallery, Clients
 from .forms import ClientsForm
@@ -43,3 +45,19 @@ def index(request):
     }
     return render(request, 'kitchen/index.html', context)
 
+
+def quiz(request):
+    context = {
+        'plan': request.POST['plan'],
+        'material': request.POST['material'],
+        'table': request.POST['table'],
+        'fittings': request.POST['fittings'],
+        'color': request.POST['color'],
+        'size': request.POST['size'],
+        'phone': request.POST['phone']
+    }
+    text = 'Заполнен quiz'
+    email_html = render_to_string('kitchen/email2.html', context)
+    send_mail('💲Потенциальный клиент)💲', text, settings.EMAIL_HOST_USER, settings.EMAIL_TARGET,
+              html_message=email_html)
+    return JsonResponse({'status': 'OK'})
