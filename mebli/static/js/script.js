@@ -54,7 +54,6 @@ let answer = {
     kitchen_material: 'ДСП',
     kitchen_table: 'Влагостойкая',
     kitchen_fittings: 'Без доводчиков',
-    kitchen_color: 'Светлая',
     kitchen_size: 'До 3 метров',
     kitchen_phone: ''
 }
@@ -90,9 +89,6 @@ function check_type(el, question){
         case 'fittings':
             answer['kitchen_fittings'] = el.value;
             break;
-        case 'color':
-            answer['kitchen_color'] = el.value;
-            break;
         case 'size':
             answer['kitchen_size'] = el.value;
             break;
@@ -111,13 +107,14 @@ function send_request (el){
     let token =  $('input[name="csrfmiddlewaretoken"]').attr('value');
     let el_phone = document.getElementById('phone');
     let el_error = document.getElementById('error');
-    let el_last_quiz = document.getElementById('q_7');
-    let el_end_quiz = document.getElementById('q_8');
+    let el_success = document.getElementById('success');
+    let el_spinner = document.getElementById('spinner');
     let result = validate_phone(el_phone.value)
     if (result){
         answer['kitchen_phone'] = el_phone.value;
         el.classList.toggle('hidden');
         el_error.classList.add('hidden');
+        el_spinner.classList.toggle('hidden')
         $.ajax({
             type: "POST",
             headers: {'X-CSRFToken': token},
@@ -127,14 +124,13 @@ function send_request (el){
                 'material': answer['kitchen_material'],
                 'table': answer['kitchen_table'],
                 'fittings': answer['kitchen_fittings'],
-                'color': answer['kitchen_color'],
                 'size': answer['kitchen_size'],
                 'phone': answer['kitchen_phone']
             },
             success: function (response) {
                 if(response.status === 'OK'){
-                    el_last_quiz.classList.add('hidden');
-                    el_end_quiz.classList.remove('hidden');
+                    el_spinner.classList.toggle('hidden')
+                    el_success.classList.remove('hidden');
                 }
             }
         });

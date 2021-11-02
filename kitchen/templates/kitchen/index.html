@@ -61,7 +61,7 @@
                 <h2>Расчет стоимости кухни по индивидуальным параметрам</h2>
                 <div class="wrap">
                     <div class="question" id="q_1">
-                        <h4>Вопрос 1 из 7</h4>
+                        <h4>Вопрос 1 из 6</h4>
                         <div class="progress_bar"></div>
                         <p>Выберите планировку кухни</p>
                         <div class="options">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <div class="question hidden" id="q_2">
-                        <h4>Вопрос 2 из 7</h4>
+                        <h4>Вопрос 2 из 6</h4>
                         <div class="progress_bar" style="width: 25%"></div>
                         <p>Выберите материалы фасадов </p>
                         <div class="options">
@@ -152,7 +152,7 @@
                         </div>
                     </div>
                     <div class="question hidden" id="q_3">
-                        <h4>Вопрос 3 из 7</h4>
+                        <h4>Вопрос 3 из 6</h4>
                         <div class="progress_bar" style="width:37.5%"></div>
                         <p>Выберите материал столешницы </p>
                         <div class="options">
@@ -193,7 +193,7 @@
                         </div>
                     </div>
                     <div class="question hidden" id="q_4">
-                        <h4>Вопрос 4 из 7</h4>
+                        <h4>Вопрос 4 из 6</h4>
                         <div class="progress_bar" style="width:50%"></div>
                         <p>Выберите тип фурнитуры</p>
                         <div class="options">
@@ -214,7 +214,7 @@
                                 <div class="form_radio">
                                     <input type="radio" id="kitchen_fittings-2" name="kitchen_fittings"
                                            value="С доводчиками" onclick="check_type(this, 'fittings')">
-                                    <label for="kitchen_table-2">С доводчиками (стандарт)</label>
+                                    <label for="kitchen_fittings-2">С доводчиками (стандарт)</label>
                                 </div>
                             </div>
                             <div class="option">
@@ -234,48 +234,7 @@
                         </div>
                     </div>
                     <div class="question hidden" id="q_5">
-                        <h4>Вопрос 5 из 7</h4>
-                        <div class="progress_bar" style="width:62.5%"></div>
-                        <p>Какая цветовая палитра вам нравится?</p>
-                        <div class="options">
-                            <div class="option">
-                                <label for="kitchen_palette-1" class="option_img">
-                                    <img src="{% static 'img/svetlaya.jpg' %}" alt="Светлая кухня">
-                                </label>
-                                <div class="form_radio">
-                                    <input type="radio" id="kitchen_palette-1" name="kitchen_palette"
-                                           value="Светлая" checked onclick="check_type(this, 'color')">
-                                    <label for="kitchen_palette-1">Светлая</label>
-                                </div>
-                            </div>
-                            <div class="option">
-                                <label for="kitchen_palette-2" class="option_img">
-                                    <img src="{% static 'img/temnaya.jpg' %}" alt="Темная кухня">
-                                </label>
-                                <div class="form_radio">
-                                    <input type="radio" id="kitchen_palette-2" name="kitchen_palette"
-                                           value="Темная" onclick="check_type(this, 'color')">
-                                    <label for="kitchen_palette-2">Темная</label>
-                                </div>
-                            </div>
-                            <div class="option">
-                                <label for="kitchen_palette-3" class="option_img">
-                                    <img src="{% static 'img/cvet.jpg' %}" alt="Цветная кухня">
-                                </label>
-                                <div class="form_radio">
-                                    <input type="radio" id="kitchen_palette-3" name="kitchen_palette"
-                                           value="Цветная" onclick="check_type(this, 'color')">
-                                    <label for="kitchen_palette-3">Цветная</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button_quiz">
-                            <button type="button" id="btn_q_down_5" onclick="next_q(this.id, 0)">Назад</button>
-                            <button type="button" id="btn_q_up_5" onclick="next_q(this.id, 1)">Далее</button>
-                        </div>
-                    </div>
-                    <div class="question hidden" id="q_6">
-                        <h4>Вопрос 6 из 7</h4>
+                        <h4>Вопрос 5 из 6</h4>
                         <div class="progress_bar" style="width:75%"></div>
                         <p>Введите ориентировочные размеры</p>
                         <img src="{% static 'img/dlina.jpg' %}" alt="Длина кухни" class="img_size">
@@ -310,57 +269,30 @@
                             </div>
                         </div>
                         <div class="button_quiz">
-                            <button type="button" id="btn_q_down_6" onclick="next_q(this.id, 0)">Назад</button>
-                            <button type="button" id="btn_q_up_6" onclick="next_q(this.id, 1)">Далее</button>
+                            <button type="button" id="btn_q_down_5" onclick="next_q(this.id, 0)">Назад</button>
+                            <button type="button" id="btn_q_up_5" onclick="next_q(this.id, 1)">Далее</button>
                         </div>
                     </div>
-{#                    <div class="question hidden" id="q_7">#}
-{#                        <h4>Вопрос 7 из 7</h4>#}
-{#                        <div class="progress_bar" style="width: 87.5%"></div>#}
-{#                        <p>Когда планируете установить кухню?</p>#}
-{#                        <div class="options">#}
-{#                            <div class="option option_text">#}
-{#                                <div class="form_radio">#}
-{#                                    <input type="radio" id="kitchen_term-1" name="kitchen_term" value="в этом месяце" checked>#}
-{#                                    <label for="kitchen_term-1">В этом месяце</label>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="option option_text">#}
-{#                                <div class="form_radio">#}
-{#                                    <input type="radio" id="kitchen_term-2" name="kitchen_term" value="В следующем месяце">#}
-{#                                    <label for="kitchen_term-2">В следующем месяце</label>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <div class="option option_text">#}
-{#                                <div class="form_radio">#}
-{#                                    <input type="radio" id="kitchen_term-3" name="kitchen_term" value="Пока не определились">#}
-{#                                    <label for="kitchen_term-3">Пока не определились</label>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                        </div>#}
-{#                        <div class="button_quiz">#}
-{#                            <button type="button" id="btn_q_down_7" onclick="next_q(this.id, 0)">Назад</button>#}
-{#                            <button type="button" id="btn_q_up_7" onclick="next_q(this.id, 1)">Далее</button>#}
-{#                        </div>#}
-{#                    </div>#}
-                    <div class="question hidden" id="q_7">
-                        <h4>Мы уже приступили к расчету кухни</h4>
+                    <div class="question hidden" id="q_6">
+                        <h4>Мы приступили к обработке вашей заявки!</h4>
                         <div class="progress_bar" style="width: 100%"></div>
-                        <p>Оставьте номер телефона и в течении часа мы пришлём вам варианты кухонь</p>
+                        <p>Оставьте свой номер телефона, и наш менеджер свяжется с вами в ближайшее время</p>
                         <div class="options phone_quiz">
                             <label>
                                 <input type="text" id="phone">
                             </label>
                         </div>
                         <p id="error" class="hidden">Введите корректный номер телефона</p>
+                        <img src="{% static 'img/spinner.gif' %}" alt="Отправка" id="spinner" class="hidden">
+                        <p id="success" class="hidden">Ваша заявка принята</p>
                         <div class="button_quiz">
                             <button type="button" onclick="send_request(this)">Получить результат</button>
                         </div>
                     </div>
-                    <div class="question hidden" id="q_8">
-                        <h4>Спасибо за оказанное доверие, в течении часа мы подготовим и вышлем результаты</h4>
-                        <img src="{% static 'img/chasy-na-kuhnyu.jpg' %}" alt="Часы на кухне" class="img_size">
-                    </div>
+{#                    <div class="question hidden" id="q_7">#}
+{#                        <h4>Спасибо за оказанное доверие, в течении часа мы подготовим и вышлем результаты</h4>#}
+{#                        <img src="{% static 'img/chasy-na-kuhnyu.jpg' %}" alt="Часы на кухне" class="img_size">#}
+{#                    </div>#}
                 </div>
             </section>
             <section class="work__block work">

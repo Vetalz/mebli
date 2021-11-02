@@ -52,7 +52,6 @@ def quiz(request):
         'material': request.POST['material'],
         'table': request.POST['table'],
         'fittings': request.POST['fittings'],
-        'color': request.POST['color'],
         'size': request.POST['size'],
         'phone': request.POST['phone']
     }
