@@ -43,7 +43,7 @@
             <form class="top__form" method="post" id="kitchen_1">
                 <div class="container">
                     {% csrf_token %}
-                    <label for="{{ form.number_phone.name }}">{% trans 'Закажите бесплатный выезд дизайнера на замер' %}</label>
+                    <label for="{{ form.number_phone.name }}">{% trans 'Оставьте заявку через форму на сайте и получите скидку' %} <span>-10%</span></label>
                     {{ form.number_phone }}
                     {% if messages %}
                         <ul class="messages">
@@ -57,6 +57,23 @@
             </form>
         </section>
         <div class="content">
+            <section class="work__block work">
+                <h2>{% trans 'Наши работы' %}</h2>
+                <div class="wrap">
+                    <div class="work__body">
+                        <div class="slider-for">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                        <div class="slider-nav">
+                            {% for item in photos %}
+                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="quiz">
                 <h2>Расчет стоимости кухни по индивидуальным параметрам</h2>
                 <div class="wrap">
@@ -293,23 +310,6 @@
 {#                        <h4>Спасибо за оказанное доверие, в течении часа мы подготовим и вышлем результаты</h4>#}
 {#                        <img src="{% static 'img/chasy-na-kuhnyu.jpg' %}" alt="Часы на кухне" class="img_size">#}
 {#                    </div>#}
-                </div>
-            </section>
-            <section class="work__block work">
-                <h2>{% trans 'Наши работы' %}</h2>
-                <div class="wrap">
-                    <div class="work__body">
-                        <div class="slider-for">
-                            {% for item in photos %}
-                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
-                            {% endfor %}
-                        </div>
-                        <div class="slider-nav">
-                            {% for item in photos %}
-                                <img src="{{ item.photo.url }}" alt="{{ item.title }}">
-                            {% endfor %}
-                        </div>
-                    </div>
                 </div>
             </section>
             <section class="form" id="2">
