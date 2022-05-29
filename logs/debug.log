@@ -1,0 +1,131 @@
+[2022-05-08 18:07:48 +0000] [37476] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 18:07:48 +0000] [37476] [INFO] Listening at: http://127.0.0.1:8000 (37476)
+[2022-05-08 18:07:48 +0000] [37476] [INFO] Using worker: sync
+[2022-05-08 18:07:48 +0000] [37477] [INFO] Booting worker with pid: 37477
+[2022-05-08 18:07:48 +0000] [37478] [INFO] Booting worker with pid: 37478
+[2022-05-08 18:14:30 +0000] [37476] [INFO] Handling signal: term
+[2022-05-08 18:14:30 +0000] [37477] [INFO] Worker exiting (pid: 37477)
+[2022-05-08 18:14:30 +0000] [37478] [INFO] Worker exiting (pid: 37478)
+[2022-05-08 18:14:31 +0000] [37476] [INFO] Shutting down: Master
+[2022-05-08 18:14:31 +0000] [37624] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 18:14:31 +0000] [37624] [INFO] Listening at: http://127.0.0.1:8000 (37624)
+[2022-05-08 18:14:31 +0000] [37624] [INFO] Using worker: sync
+[2022-05-08 18:14:31 +0000] [37625] [INFO] Booting worker with pid: 37625
+[2022-05-08 18:14:31 +0000] [37626] [INFO] Booting worker with pid: 37626
+[2022-05-08 19:44:20 +0000] [37624] [INFO] Handling signal: term
+[2022-05-08 19:44:20 +0000] [37626] [INFO] Worker exiting (pid: 37626)
+[2022-05-08 19:44:20 +0000] [37625] [INFO] Worker exiting (pid: 37625)
+[2022-05-08 19:44:21 +0000] [37624] [INFO] Shutting down: Master
+[2022-05-08 19:44:21 +0000] [39387] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 19:44:21 +0000] [39387] [INFO] Listening at: http://127.0.0.1:8000 (39387)
+[2022-05-08 19:44:21 +0000] [39387] [INFO] Using worker: sync
+[2022-05-08 19:44:21 +0000] [39388] [INFO] Booting worker with pid: 39388
+[2022-05-08 19:44:21 +0000] [39389] [INFO] Booting worker with pid: 39389
+[2022-05-08 20:09:03 +0000] [39387] [INFO] Handling signal: term
+[2022-05-08 20:09:03 +0000] [39388] [INFO] Worker exiting (pid: 39388)
+[2022-05-08 20:09:03 +0000] [39389] [INFO] Worker exiting (pid: 39389)
+[2022-05-08 20:09:03 +0000] [39387] [INFO] Shutting down: Master
+[2022-05-08 20:09:03 +0000] [39763] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:09:04 +0000] [39763] [INFO] Listening at: http://127.0.0.1:8000 (39763)
+[2022-05-08 20:09:04 +0000] [39763] [INFO] Using worker: sync
+[2022-05-08 20:09:04 +0000] [39764] [INFO] Booting worker with pid: 39764
+[2022-05-08 20:09:04 +0000] [39765] [INFO] Booting worker with pid: 39765
+[2022-05-08 20:14:24 +0000] [39763] [INFO] Handling signal: term
+[2022-05-08 20:14:24 +0000] [39765] [INFO] Worker exiting (pid: 39765)
+[2022-05-08 20:14:24 +0000] [39764] [INFO] Worker exiting (pid: 39764)
+[2022-05-08 20:14:25 +0000] [39763] [INFO] Shutting down: Master
+[2022-05-08 20:14:25 +0000] [39849] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:14:25 +0000] [39849] [INFO] Listening at: http://127.0.0.1:8000 (39849)
+[2022-05-08 20:14:25 +0000] [39849] [INFO] Using worker: sync
+[2022-05-08 20:14:25 +0000] [39850] [INFO] Booting worker with pid: 39850
+[2022-05-08 20:14:25 +0000] [39851] [INFO] Booting worker with pid: 39851
+[2022-05-08 20:38:14 +0000] [39849] [INFO] Handling signal: term
+[2022-05-08 20:38:14 +0000] [39851] [INFO] Worker exiting (pid: 39851)
+[2022-05-08 20:38:14 +0000] [39850] [INFO] Worker exiting (pid: 39850)
+[2022-05-08 20:38:14 +0000] [39849] [INFO] Shutting down: Master
+[2022-05-08 20:38:15 +0000] [41550] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:38:15 +0000] [41550] [INFO] Listening at: http://127.0.0.1:8000 (41550)
+[2022-05-08 20:38:15 +0000] [41550] [INFO] Using worker: sync
+[2022-05-08 20:38:15 +0000] [41551] [INFO] Booting worker with pid: 41551
+[2022-05-08 20:38:15 +0000] [41552] [INFO] Booting worker with pid: 41552
+[2022-05-08 20:38:50 +0000] [41550] [INFO] Handling signal: term
+[2022-05-08 20:38:50 +0000] [41551] [INFO] Worker exiting (pid: 41551)
+[2022-05-08 20:38:50 +0000] [41552] [INFO] Worker exiting (pid: 41552)
+[2022-05-08 20:38:50 +0000] [41550] [INFO] Shutting down: Master
+[2022-05-08 20:38:50 +0000] [41561] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:38:50 +0000] [41561] [INFO] Listening at: http://127.0.0.1:8000 (41561)
+[2022-05-08 20:38:50 +0000] [41561] [INFO] Using worker: sync
+[2022-05-08 20:38:50 +0000] [41562] [INFO] Booting worker with pid: 41562
+[2022-05-08 20:38:50 +0000] [41563] [INFO] Booting worker with pid: 41563
+[2022-05-08 20:39:18 +0000] [41561] [INFO] Handling signal: term
+[2022-05-08 20:39:18 +0000] [41563] [INFO] Worker exiting (pid: 41563)
+[2022-05-08 20:39:18 +0000] [41562] [INFO] Worker exiting (pid: 41562)
+[2022-05-08 20:39:18 +0000] [41561] [INFO] Shutting down: Master
+[2022-05-08 20:39:18 +0000] [41570] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:39:18 +0000] [41570] [INFO] Listening at: http://127.0.0.1:8000 (41570)
+[2022-05-08 20:39:18 +0000] [41570] [INFO] Using worker: sync
+[2022-05-08 20:39:18 +0000] [41571] [INFO] Booting worker with pid: 41571
+[2022-05-08 20:39:19 +0000] [41572] [INFO] Booting worker with pid: 41572
+[2022-05-08 20:46:38 +0000] [41570] [INFO] Handling signal: term
+[2022-05-08 20:46:38 +0000] [41571] [INFO] Worker exiting (pid: 41571)
+[2022-05-08 20:46:38 +0000] [41572] [INFO] Worker exiting (pid: 41572)
+[2022-05-08 20:46:38 +0000] [41570] [INFO] Shutting down: Master
+[2022-05-08 20:46:38 +0000] [41721] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 20:46:38 +0000] [41721] [INFO] Listening at: http://127.0.0.1:8000 (41721)
+[2022-05-08 20:46:38 +0000] [41721] [INFO] Using worker: sync
+[2022-05-08 20:46:38 +0000] [41722] [INFO] Booting worker with pid: 41722
+[2022-05-08 20:46:38 +0000] [41723] [INFO] Booting worker with pid: 41723
+[2022-05-08 21:09:37 +0000] [41721] [INFO] Handling signal: term
+[2022-05-08 21:09:37 +0000] [41722] [INFO] Worker exiting (pid: 41722)
+[2022-05-08 21:09:37 +0000] [41723] [INFO] Worker exiting (pid: 41723)
+[2022-05-08 21:09:37 +0000] [41721] [INFO] Shutting down: Master
+[2022-05-08 21:09:37 +0000] [42072] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:09:37 +0000] [42072] [INFO] Listening at: http://127.0.0.1:8000 (42072)
+[2022-05-08 21:09:37 +0000] [42072] [INFO] Using worker: sync
+[2022-05-08 21:09:38 +0000] [42073] [INFO] Booting worker with pid: 42073
+[2022-05-08 21:09:38 +0000] [42074] [INFO] Booting worker with pid: 42074
+[2022-05-08 21:15:22 +0000] [42072] [INFO] Handling signal: term
+[2022-05-08 21:15:22 +0000] [42074] [INFO] Worker exiting (pid: 42074)
+[2022-05-08 21:15:22 +0000] [42073] [INFO] Worker exiting (pid: 42073)
+[2022-05-08 21:15:22 +0000] [42072] [INFO] Shutting down: Master
+[2022-05-08 21:15:22 +0000] [42156] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:15:22 +0000] [42156] [INFO] Listening at: http://127.0.0.1:8000 (42156)
+[2022-05-08 21:15:22 +0000] [42156] [INFO] Using worker: sync
+[2022-05-08 21:15:22 +0000] [42157] [INFO] Booting worker with pid: 42157
+[2022-05-08 21:15:22 +0000] [42158] [INFO] Booting worker with pid: 42158
+[2022-05-08 21:38:09 +0000] [42156] [INFO] Handling signal: term
+[2022-05-08 21:38:09 +0000] [42158] [INFO] Worker exiting (pid: 42158)
+[2022-05-08 21:38:10 +0000] [42157] [INFO] Worker exiting (pid: 42157)
+[2022-05-08 21:38:10 +0000] [42156] [INFO] Shutting down: Master
+[2022-05-08 21:38:10 +0000] [42684] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:38:10 +0000] [42684] [INFO] Listening at: http://127.0.0.1:8000 (42684)
+[2022-05-08 21:38:10 +0000] [42684] [INFO] Using worker: sync
+[2022-05-08 21:38:10 +0000] [42685] [INFO] Booting worker with pid: 42685
+[2022-05-08 21:38:10 +0000] [42686] [INFO] Booting worker with pid: 42686
+[2022-05-08 21:44:51 +0000] [42684] [INFO] Handling signal: term
+[2022-05-08 21:44:51 +0000] [42686] [INFO] Worker exiting (pid: 42686)
+[2022-05-08 21:44:51 +0000] [42685] [INFO] Worker exiting (pid: 42685)
+[2022-05-08 21:44:51 +0000] [42684] [INFO] Shutting down: Master
+[2022-05-08 21:44:51 +0000] [42759] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:44:51 +0000] [42759] [INFO] Listening at: http://127.0.0.1:8000 (42759)
+[2022-05-08 21:44:51 +0000] [42759] [INFO] Using worker: sync
+[2022-05-08 21:44:51 +0000] [42760] [INFO] Booting worker with pid: 42760
+[2022-05-08 21:44:51 +0000] [42761] [INFO] Booting worker with pid: 42761
+[2022-05-08 21:53:06 +0000] [42759] [INFO] Handling signal: term
+[2022-05-08 21:53:06 +0000] [42760] [INFO] Worker exiting (pid: 42760)
+[2022-05-08 21:53:06 +0000] [42761] [INFO] Worker exiting (pid: 42761)
+[2022-05-08 21:53:06 +0000] [42759] [INFO] Shutting down: Master
+[2022-05-08 21:53:06 +0000] [42859] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:53:06 +0000] [42859] [INFO] Listening at: http://127.0.0.1:8000 (42859)
+[2022-05-08 21:53:06 +0000] [42859] [INFO] Using worker: sync
+[2022-05-08 21:53:06 +0000] [42860] [INFO] Booting worker with pid: 42860
+[2022-05-08 21:53:06 +0000] [42861] [INFO] Booting worker with pid: 42861
+[2022-05-08 21:55:46 +0000] [42859] [INFO] Handling signal: term
+[2022-05-08 21:55:46 +0000] [42861] [INFO] Worker exiting (pid: 42861)
+[2022-05-08 21:55:46 +0000] [42860] [INFO] Worker exiting (pid: 42860)
+[2022-05-08 21:55:46 +0000] [42859] [INFO] Shutting down: Master
+[2022-05-08 21:55:46 +0000] [42896] [INFO] Starting gunicorn 20.1.0
+[2022-05-08 21:55:46 +0000] [42896] [INFO] Listening at: http://127.0.0.1:8000 (42896)
+[2022-05-08 21:55:46 +0000] [42896] [INFO] Using worker: sync
+[2022-05-08 21:55:46 +0000] [42897] [INFO] Booting worker with pid: 42897
+[2022-05-08 21:55:47 +0000] [42898] [INFO] Booting worker with pid: 42898

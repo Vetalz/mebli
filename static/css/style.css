@@ -94,7 +94,7 @@ body._lock {
 
 .menu__link {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color: #362917;
 }
 
@@ -104,6 +104,15 @@ body._lock {
 
 .paralax {
     background: url("../img/background.webp");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax2 {
+    background: url("../img/background2.webp");
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -691,4 +700,11 @@ li.error {
         background-size: auto;
         background-color: rgba(54, 41, 23, .55);
     }
+
+    .paralax2 {
+        background-attachment: scroll;
+        background-size: auto;
+        background-color: rgba(54, 41, 23, .55);
+    }
+
 }
